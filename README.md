@@ -2,91 +2,94 @@
 
 > **RRALALS7 sempre ajuda.**
 
-Biblioteca pública de ideias para **bots, scripts, automações, ferramentas de IA, utilitários gamer, Roblox utils e web apps** — tudo organizado para devs pegarem inspiração e criarem projetos seguros, úteis e legais.
+Central pública de **bots prontos, sistemas complexos, automações, ferramentas gamer, utilitários Roblox, IA aplicada e documentação para devs**.
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Made by RRALALS7](https://img.shields.io/badge/made%20by-RRALALS7-purple)
 ![Language](https://img.shields.io/badge/language-PT--BR-blue)
-![Focus](https://img.shields.io/badge/focus-dev%20ideas-orange)
+![Focus](https://img.shields.io/badge/focus-bots%20%2B%20systems-orange)
 
 ---
 
 ## ✨ Objetivo
 
-Este hub foi criado para ajudar devs iniciantes e intermediários a encontrar ideias boas para estudar, montar portfólio, publicar projetos open source e criar ferramentas que realmente ajudam comunidades.
+Este repositório não é mais só um catálogo de ideias.
 
-Aqui você vai encontrar ideias com:
+Agora o foco é entregar **projetos reais**, organizados em níveis:
 
-- descrição clara
-- stack sugerida
-- dificuldade
-- recursos principais
-- roadmap inicial
-- cuidados de segurança e uso responsável
-
----
-
-## 🧭 Categorias
-
-| Categoria | Arquivo |
-|---|---|
-| 🤖 Discord Bots | [`ideas/discord-bots.md`](./ideas/discord-bots.md) |
-| 🧠 AI Tools | [`ideas/ai-tools.md`](./ideas/ai-tools.md) |
-| 🧱 Roblox Utils | [`ideas/roblox-utils.md`](./ideas/roblox-utils.md) |
-| 🛡️ Security Tools | [`ideas/security-tools.md`](./ideas/security-tools.md) |
-| 🌐 Web Apps | [`ideas/web-apps.md`](./ideas/web-apps.md) |
-| 🎮 Game Tools | [`ideas/game-tools.md`](./ideas/game-tools.md) |
-| 🧰 Templates | [`templates`](./templates) |
+- bots simples para rodar rápido
+- bots complexos com módulos e arquitetura
+- sistemas de verificação, moderação e música
+- templates e documentação para criar novos projetos
+- site/vitrine do Dev Hub
 
 ---
 
-## 🔥 Índice com 30 ideias
+## 🧭 Estrutura principal
 
-### 🤖 Discord Bots
-1. Bot IA Moderador
-2. Bot de Tickets Profissional
-3. Bot de Sorteios
-4. Bot de Economia Fake
-5. Bot de Música com Fila
-6. Bot de Enquetes
-7. Bot de Eventos Gamer
-8. Bot de Auto-Cargos
-
-### 🧠 AI Tools
-9. Biblioteca de Prompts IA
-10. Bot Resumidor de Textos
-11. Tutor de Programação
-12. Gerador de README
-13. Assistente de Estudos com IA
-
-### 🧱 Roblox Utils
-14. Roblox Public Lookup Bot
-15. Bot de Verificação Roblox
-16. Sistema de Whitelist Roblox
-17. Dashboard de Perfis Públicos
-18. Monitor de Status de Experiências
-
-### 🛡️ Security Tools
-19. Anti-Scam Link Checker
-20. Detector de Links Suspeitos em Comunidade
-21. WHOIS Helper para Domínios
-22. Checklist de Segurança para Bots
-
-### 🌐 Web Apps
-23. Dashboard de Status de Bot
-24. Dev Toolbox Web
-25. Gerador de Banner para Servidor
-26. Catálogo de Scripts e Ideias
-
-### 🎮 Game Tools
-27. Minecraft Server Status Bot
-28. Ranking Gamer Manual
-29. Inventário Gamer Fake
-30. Organizador de Torneios
+| Área | Caminho | Descrição |
+|---|---|---|
+| 🤖 Bots prontos | [`bots/`](./bots) | Bots simples em Node.js/Python para estudar, adaptar e rodar |
+| 🧬 Bots complexos | [`complexos/`](./complexos) | Sistemas avançados com módulos, logs, IA opcional e configuração |
+| 🧠 Arquitetura | [`architecture/`](./architecture) | Explicações técnicas dos sistemas |
+| 🧪 Casos de teste | [`test-cases/`](./test-cases) | Testes, edge cases e prevenção de falso positivo |
+| 🧰 Templates | [`templates/`](./templates) | Modelos de roadmap, ideia e documentação |
+| 📚 Docs | [`docs/`](./docs) | Guias gerais do projeto |
+| 🌐 Site | [`site/`](./site) | Vitrine web simples do Dev Hub |
+| 🗺️ Roadmap | [`ROADMAP.md`](./ROADMAP.md) | Prioridades e direção do projeto |
 
 ---
 
-## ✅ Regras do Hub
+## 🔥 Projetos em destaque
+
+### 🤖 Bots prontos
+
+- Ticket Bot
+- Auto Roles Bot
+- Giveaway Bot
+- Poll Bot
+- Economy Bot
+- Anti Scam Bot
+- Roblox Public Info Bot
+- Roblox Verify Bot
+- Minecraft Status Bot Python
+- Game Tournament Bot
+- RRALALS7 Bot Suite
+
+Veja tudo em [`bots/`](./bots).
+
+---
+
+### 🧬 Sistemas complexos
+
+- **AI Moderation Guard / Moderation OS**
+  - score + confiança
+  - contexto recente
+  - Staff Assistant
+  - Appeal System
+  - Reputation System
+  - Groq opcional
+
+- **Roblox Rigid Verification**
+  - cargo Não Verificado
+  - cargo Verificado
+  - canal automático de verificação
+  - validação por perfil público Roblox
+  - logs de staff
+
+- **Music Station Bot**
+  - fila por servidor
+  - rádio/URL direta permitida
+  - DJ mode
+  - volume
+  - loop
+  - controles completos
+
+Veja tudo em [`complexos/`](./complexos).
+
+---
+
+## 🛡️ Regras do Hub
 
 Este projeto **não apoia** e **não publica** conteúdo para:
 
@@ -106,24 +109,28 @@ O foco é: **aprender, criar, proteger, automatizar com responsabilidade e ajuda
 
 ## 🚀 Como usar
 
-1. Escolha uma categoria em [`ideas`](./ideas)
-2. Leia uma ideia
-3. Copie o roadmap base
-4. Adapte para seu estilo
-5. Crie seu projeto
-6. Publique no GitHub
-7. Evolua com novas features
+1. Escolha uma pasta em [`bots/`](./bots) ou [`complexos/`](./complexos)
+2. Leia o `README.md` do projeto escolhido
+3. Configure o `.env.example`
+4. Instale dependências
+5. Registre comandos quando for bot Discord
+6. Teste em servidor privado
+7. Adapte para seu uso
 
 ---
 
-## 🧩 Como adicionar uma nova ideia
+## 🧩 Próximos passos
 
-Use os modelos:
+O projeto agora deve focar em:
 
-- [`templates/idea-template.md`](./templates/idea-template.md)
-- [`templates/project-roadmap.md`](./templates/project-roadmap.md)
+- testar os bots em ambiente real
+- polir o site
+- criar GitHub Actions
+- criar versões SQLite dos bots maiores
+- melhorar documentação dos complexos
+- adicionar screenshots/GIFs dos comandos funcionando
 
-Depois abra uma issue ou pull request explicando a ideia.
+Acompanhe também a issue de roadmap: [`#1`](https://github.com/RRALALS7/rralals7-dev-hub/issues/1)
 
 ---
 
@@ -135,7 +142,7 @@ Contribuições são bem-vindas, desde que sigam as regras de uso responsável. 
 
 ## 🛡️ Segurança
 
-Encontrou uma ideia perigosa, abusiva ou mal explicada? Leia [`SECURITY.md`](./SECURITY.md) e reporte com responsabilidade.
+Encontrou algo perigoso, abusivo ou mal explicado? Leia [`SECURITY.md`](./SECURITY.md) e reporte com responsabilidade.
 
 ---
 

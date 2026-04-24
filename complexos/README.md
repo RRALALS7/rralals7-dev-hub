@@ -1,6 +1,6 @@
 # 🧬 Bots Complexos — RRALALS7 Dev Hub
 
-> Área para bots mais avançados, com automação real, IA, sistemas rígidos e arquitetura mais profissional.
+> Sistemas avançados com automação real, módulos, logs, IA opcional e arquitetura mais profissional.
 
 ---
 
@@ -21,14 +21,54 @@ A pasta `complexos/` contém projetos maiores, com:
 
 ---
 
-## Projetos complexos iniciais
+## Projetos complexos atuais
 
 | Projeto | Pasta | Stack | Status |
 |---|---|---|---|
-| AI Moderation Guard | [`ai-moderation-guard`](./ai-moderation-guard) | Node.js + Groq opcional | Starter |
-| Roblox Rigid Verification | [`roblox-rigid-verification`](./roblox-rigid-verification) | Node.js | Starter |
-| Server Control Center | [`server-control-center`](./server-control-center) | Node.js + Dashboard futuro | Planejado |
-| Community Security Suite | [`community-security-suite`](./community-security-suite) | Node.js | Planejado |
+| Moderation OS / AI Moderation Guard | [`ai-moderation-guard`](./ai-moderation-guard) | Node.js + Groq opcional | Starter avançado funcional |
+| Roblox Rigid Verification | [`roblox-rigid-verification`](./roblox-rigid-verification) | Node.js | Starter avançado funcional |
+| Music Station Bot | [`music-station-bot`](./music-station-bot) | Node.js + Voice | Starter avançado funcional |
+
+---
+
+## Módulos importantes já planejados/criados
+
+### Moderation OS
+
+- AI Message Guard
+- Staff Assistant
+- Appeal System
+- Reputation System
+- Server Guardian planejado com cuidado extra
+
+### Roblox Rigid Verification
+
+- cargo Não Verificado
+- cargo Verificado
+- canal de verificação
+- logs de staff
+- validação por perfil público Roblox
+
+### Music Station Bot
+
+- fila por servidor
+- rádio/URL direta permitida
+- DJ mode
+- loop
+- volume
+- controles de voz
+
+---
+
+## Projetos complexos para o futuro
+
+| Projeto | Ideia |
+|---|---|
+| Server Control Center | painel central para configurar bots |
+| Community Security Suite | pacote de segurança defensiva para comunidades |
+| Tournament Pro | torneios com times, MD3/MD5 e ranking |
+| Roblox Community Manager | verificação, cargos, grupo e eventos Roblox |
+| Bot Dashboard | painel web opcional para status e configuração |
 
 ---
 
@@ -48,6 +88,8 @@ Obrigatório:
 
 ---
 
-## Frase do projeto
+## Próximo ponto fixo
+
+Testar os sistemas complexos em servidor privado e transformar os pontos estáveis em versões com SQLite.
 
 > RRALALS7 sempre ajuda.

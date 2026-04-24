@@ -1,0 +1,1 @@
+{"name":"rralals7-roblox-rigid-verification","version":"1.0.0","description":"Sistema rigido de verificacao Roblox para Discord.","main":"src/index.js","scripts":{"start":"node src/index.js","register":"node src/register-commands.js"},"author":"RRALALS7","license":"AGPL-3.0-or-later","dependencies":{"axios":"^1.7.9","discord.js":"^14.17.3","dotenv":"^16.4.7"}}

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Gerar README profissional",
+    "category": "README",
+    "prompt": "Crie um README profissional para este projeto, com objetivo, instalação, uso, comandos, variáveis de ambiente, roadmap, segurança e licença."
+  },
+  {
+    "title": "Revisar código Node.js",
+    "category": "Programação",
+    "prompt": "Revise este código Node.js procurando bugs, problemas de segurança, melhorias de organização e tratamento de erros."
+  },
+  {
+    "title": "Plano de estudos",
+    "category": "Estudo",
+    "prompt": "Monte um plano de estudos de 7 dias sobre este assunto, com explicação simples, exercícios e revisão."
+  },
+  {
+    "title": "Bot Discord seguro",
+    "category": "Bots Discord",
+    "prompt": "Planeje um bot Discord seguro com comandos slash, permissões, logs, cooldowns, .env.example e README."
+  },
+  {
+    "title": "Prompt para Canva",
+    "category": "Canva/Figma",
+    "prompt": "Crie um design visual chamativo para este tema, com cores vibrantes, hierarquia clara, texto curto e estilo moderno."
+  }
+]

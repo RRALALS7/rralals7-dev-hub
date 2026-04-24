@@ -1,0 +1,1 @@
+{"name":"rralals7-anti-scam-bot","version":"1.0.0","description":"Bot Discord defensivo para verificar links suspeitos.","main":"src/index.js","scripts":{"start":"node src/index.js","register":"node src/register-commands.js"},"author":"RRALALS7","license":"AGPL-3.0-or-later","dependencies":{"discord.js":"^14.17.3","dotenv":"^16.4.7","axios":"^1.7.9"}}

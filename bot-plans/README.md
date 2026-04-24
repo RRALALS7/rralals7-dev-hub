@@ -1,63 +1,69 @@
-# 🤖 Bot Plans — Projetos que vamos construir
+# 🤖 Bot Plans — Arquivo de Planejamento
 
-> Aqui ficam os bots que o RRALALS7 Dev Hub vai transformar em projetos reais.
+> Esta pasta guarda os planos técnicos que deram origem aos bots e sistemas do RRALALS7 Dev Hub.
 
 ---
 
-## Diferença entre pastas
+## Estado atual
 
-| Pasta | Função |
+Antes, esta pasta representava os bots que ainda seriam feitos.
+
+Agora, boa parte deles já virou projeto real em:
+
+- [`bots/`](../bots)
+- [`complexos/`](../complexos)
+- [`apps/`](../apps)
+
+Então `bot-plans/` funciona como **arquivo de planejamento e referência técnica**.
+
+---
+
+## Áreas atuais do repo
+
+| Pasta | Função atual |
 |---|---|
-| `ideas/` | Ideias gerais para o público se inspirar |
-| `ideias-prontas/` | Ideias já organizadas como mini-projetos prontos para começar |
-| `bot-plans/` | Bots que vamos construir de verdade, com plano técnico completo |
+| `bots/` | bots simples e funcionais para rodar/adaptar |
+| `complexos/` | sistemas avançados com módulos, logs e arquitetura |
+| `apps/` | apps web e ferramentas auxiliares |
+| `bot-plans/` | planos técnicos e decisões de arquitetura |
+| `architecture/` | visão técnica dos sistemas |
+| `test-cases/` | casos de teste e bordas importantes |
+| `docs/` | documentação geral |
+| `site/` | vitrine web do hub |
 
 ---
 
-## Stack padrão
+## Stack padrão atual
 
-A stack principal dos bots será:
-
-- **Node.js**
-- **discord.js**
-- **SQLite** para projetos simples
-- **PostgreSQL** para projetos maiores
-- **Express** quando precisar de API ou dashboard
-
----
-
-## Quando usar Python
-
-Python será usado em poucos projetos mais complexos, principalmente quando envolver:
-
-- IA avançada
-- análise de dados
-- automações de segurança defensiva
-- processamento de texto
-- ferramentas auxiliares
+- **Node.js** para a maioria dos bots Discord
+- **discord.js** para comandos e interações
+- **Python** para bots gamer/consulta quando fizer sentido
+- **JSON local** para starters simples
+- **SQLite** como próximo passo para bots médios
+- **PostgreSQL** para sistemas maiores no futuro
+- **Express/React** quando houver dashboard
 
 ---
 
-## Bots prioritários
+## Planos que já viraram projeto
 
-| Ordem | Bot | Stack principal | Status |
-|---|---|---|---|
-| 1 | Ticket Bot | Node.js | Planejado |
-| 2 | Auto-Cargos Bot | Node.js | Planejado |
-| 3 | Roblox Public Lookup Bot | Node.js | Planejado |
-| 4 | Anti-Scam Link Checker | Node.js + APIs de reputação | Planejado |
-| 5 | IA Moderador Bot | Node.js + IA | Planejado |
-| 6 | Giveaway Bot | Node.js | Futuro |
-| 7 | Economy Bot | Node.js | Futuro |
-| 8 | Music Queue Bot | Node.js + Lavalink | Futuro |
-| 9 | Game Event Bot | Node.js | Futuro |
-| 10 | Study Helper Bot | Node.js ou Python | Futuro |
+| Plano | Projeto real |
+|---|---|
+| Ticket Bot | [`bots/ticket-bot`](../bots/ticket-bot) |
+| Auto-Cargos Bot | [`bots/auto-roles-bot`](../bots/auto-roles-bot) |
+| Roblox Lookup | [`bots/roblox-public-info-bot`](../bots/roblox-public-info-bot) |
+| Anti-Scam Link Checker | [`bots/anti-scam-bot`](../bots/anti-scam-bot) |
+| IA Moderador | [`complexos/ai-moderation-guard`](../complexos/ai-moderation-guard) |
+| Giveaway Bot | [`bots/giveaway-bot`](../bots/giveaway-bot) |
+| Economy Bot | [`bots/economy-bot`](../bots/economy-bot) |
+| Music Bot | [`complexos/music-station-bot`](../complexos/music-station-bot) |
+| Study Helper | [`bots/study-helper-bot`](../bots/study-helper-bot) |
 
 ---
 
 ## Padrão de cada plano
 
-Cada bot terá:
+Cada plano deve continuar servindo como base para:
 
 - objetivo
 - stack
@@ -72,6 +78,8 @@ Cada bot terá:
 
 ---
 
-## Frase do projeto
+## Próxima utilidade desta pasta
+
+Usar `bot-plans/` para desenhar sistemas antes de virar código em `bots/` ou `complexos/`.
 
 > RRALALS7 sempre ajuda.

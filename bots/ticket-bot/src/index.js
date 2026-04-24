@@ -27,6 +27,22 @@ function embed(title, description) {
     .setTimestamp();
 }
 
+function removeTicketByChannel(channelId) {
+  for (const [key, storedChannelId] of openTickets.entries()) {
+    if (storedChannelId === channelId) openTickets.delete(key);
+  }
+}
+
+async function closeTicket(interaction) {
+  if (!interaction.channel || !interaction.channel.name.startsWith('ticket-')) {
+    return interaction.reply({ content: 'Este canal não parece ser um ticket.', ephemeral: true });
+  }
+
+  removeTicketByChannel(interaction.channelId);
+  await interaction.reply('Fechando ticket em 5 segundos...');
+  setTimeout(() => interaction.channel.delete().catch(() => {}), 5000);
+}
+
 client.once('ready', () => {
   console.log(`Ticket Bot online como ${client.user.tag}`);
 });
@@ -57,22 +73,20 @@ client.on('interactionCreate', async interaction => {
         });
       }
 
-      if (sub === 'close') {
-        if (!interaction.channel.name.startsWith('ticket-')) {
-          return interaction.reply({ content: 'Este canal não parece ser um ticket.', ephemeral: true });
-        }
-
-        await interaction.reply('Fechando ticket em 5 segundos...');
-        setTimeout(() => interaction.channel.delete().catch(() => {}), 5000);
-      }
+      if (sub === 'close') return closeTicket(interaction);
     }
 
     if (interaction.isButton()) {
       if (interaction.customId === 'open_ticket') {
         const key = `${interaction.guildId}:${interaction.user.id}`;
-        if (openTickets.has(key)) {
-          return interaction.reply({ content: 'Você já possui um ticket aberto.', ephemeral: true });
+        const currentChannelId = openTickets.get(key);
+        const currentChannel = currentChannelId ? interaction.guild.channels.cache.get(currentChannelId) : null;
+
+        if (currentChannel) {
+          return interaction.reply({ content: `Você já possui um ticket aberto: ${currentChannel}`, ephemeral: true });
         }
+
+        if (currentChannelId && !currentChannel) openTickets.delete(key);
 
         const overwrites = [
           { id: interaction.guild.roles.everyone.id, deny: [PermissionsBitField.Flags.ViewChannel] },
@@ -109,10 +123,7 @@ client.on('interactionCreate', async interaction => {
         return interaction.reply({ content: `Ticket criado: ${channel}`, ephemeral: true });
       }
 
-      if (interaction.customId === 'close_ticket') {
-        await interaction.reply('Fechando ticket em 5 segundos...');
-        setTimeout(() => interaction.channel.delete().catch(() => {}), 5000);
-      }
+      if (interaction.customId === 'close_ticket') return closeTicket(interaction);
     }
   } catch (error) {
     console.error(error);

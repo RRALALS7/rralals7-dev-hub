@@ -53,6 +53,16 @@ async def query_server(host: str) -> dict:
     }
 
 
+def status_description(data: dict) -> str:
+    return (
+        f"**Servidor:** `{data['host']}`\n"
+        f"**Jogadores:** `{data['online']}/{data['max']}`\n"
+        f"**Ping:** `{data['latency']}ms`\n"
+        f"**Versão:** `{data['version']}`\n"
+        f"**MOTD:** {data['motd']}"
+    )
+
+
 @client.event
 async def on_ready():
     if GUILD_ID:
@@ -72,14 +82,7 @@ async def mcstatus(interaction: discord.Interaction, host: str):
     await interaction.response.defer()
     try:
         data = await query_server(host)
-        description = (
-            f"**Servidor:** `{data['host']}`\n"
-            f"**Jogadores:** `{data['online']}/{data['max']}`\n"
-            f"**Ping:** `{data['latency']}ms`\n"
-            f"**Versão:** `{data['version']}`\n"
-            f"**MOTD:** {data['motd']}"
-        )
-        await interaction.followup.send(embed=make_embed("🎮 Minecraft Server Status", description))
+        await interaction.followup.send(embed=make_embed("🎮 Minecraft Server Status", status_description(data)))
     except Exception as error:
         await interaction.followup.send(
             embed=make_embed("❌ Erro ao consultar servidor", f"Não consegui consultar `{host}`.\nDetalhe: `{error}`", 0xEF4444),
@@ -120,7 +123,15 @@ async def mcwatch_status(interaction: discord.Interaction):
     if not host:
         return await interaction.response.send_message("Nenhum servidor salvo. Use `/mcwatch` primeiro.", ephemeral=True)
 
-    await mcstatus.callback(interaction, host)
+    await interaction.response.defer()
+    try:
+        server_data = await query_server(host)
+        await interaction.followup.send(embed=make_embed("🎮 Minecraft Server Status", status_description(server_data)))
+    except Exception as error:
+        await interaction.followup.send(
+            embed=make_embed("❌ Erro ao consultar servidor", f"Não consegui consultar `{host}`.\nDetalhe: `{error}`", 0xEF4444),
+            ephemeral=True
+        )
 
 
 if not TOKEN:

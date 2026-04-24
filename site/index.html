@@ -3,65 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RRALALS7 Dev Hub: bots Discord, sistemas complexos, apps web, Roblox utilities, IA e documentação dev." />
   <title>RRALALS7 Dev Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav>
-      <strong>RRALALS7 Dev Hub</strong>
-      <a href="#bots">Bots</a>
-      <a href="#complexos">Complexos</a>
-      <a href="#apps">Apps</a>
-      <a href="#docs">Docs</a>
+  <header class="hero" id="topo">
+    <nav class="nav">
+      <a class="brand" href="#topo">RRALALS7 Dev Hub</a>
+      <div class="nav-links">
+        <a href="#projetos">Projetos</a>
+        <a href="#complexos">Complexos</a>
+        <a href="#apps">Apps</a>
+        <a href="#docs">Docs</a>
+        <a href="#futuro">Futuro</a>
+      </div>
     </nav>
 
     <section class="hero-content">
       <p class="badge">🚀 Open Source • PT-BR • Dev/Gamer</p>
-      <h1>Central de bots, sistemas complexos e apps úteis.</h1>
-      <p>Explore bots Discord, sistemas de moderação, verificação Roblox, música, apps web, arquitetura e documentação para portfólio dev.</p>
+      <h1>Bots, sistemas complexos e apps úteis em um só hub.</h1>
+      <p class="hero-text">
+        Uma central feita por RRALALS7 com bots Discord, sistemas de moderação,
+        verificação Roblox, música, apps web, documentação e arquitetura para devs.
+      </p>
+
       <div class="actions">
-        <a class="button primary" href="../README.md">Ver README</a>
-        <a class="button" href="../bots/README.md">Ver bots</a>
-        <a class="button" href="../complexos/README.md">Ver complexos</a>
+        <a class="button primary" href="https://github.com/RRALALS7/rralals7-dev-hub" target="_blank" rel="noreferrer">Abrir no GitHub</a>
+        <a class="button" href="#projetos">Ver projetos</a>
+        <a class="button" href="#complexos">Ver complexos</a>
+      </div>
+
+      <div class="stats" aria-label="Resumo do projeto">
+        <article><strong>12+</strong><span>Bots prontos</span></article>
+        <article><strong>3</strong><span>Sistemas complexos</span></article>
+        <article><strong>4</strong><span>Apps web</span></article>
+        <article><strong>PT-BR</strong><span>Foco dev</span></article>
       </div>
     </section>
   </header>
 
   <main>
-    <section id="bots" class="section">
-      <h2>🤖 Bots prontos</h2>
-      <div class="grid" id="botGrid"></div>
+    <section class="section intro">
+      <p class="eyebrow">Ponto fixo atual</p>
+      <h2>O projeto deixou de ser só ideias e virou uma central real.</h2>
+      <p>
+        O hub agora é dividido em bots simples, sistemas complexos, apps web,
+        arquitetura, testes e documentação. A próxima fase é testar tudo em ambiente real,
+        polir o visual e evoluir os projetos principais.
+      </p>
     </section>
 
-    <section id="complexos" class="section">
-      <h2>🧬 Sistemas complexos</h2>
-      <div class="grid">
-        <article class="card"><h3>Moderation OS</h3><p>Score, confiança, Staff Assistant, appeals e reputação.</p><span class="tag">Node.js + IA opcional</span></article>
-        <article class="card"><h3>Roblox Rigid Verification</h3><p>Verificação rígida por perfil público Roblox, cargos e logs.</p><span class="tag">Node.js</span></article>
-        <article class="card"><h3>Music Station Bot</h3><p>Fila, rádio/URL direta permitida, DJ mode, volume e loop.</p><span class="tag">Node.js + Voice</span></article>
+    <section class="section" id="projetos">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Catálogo</p>
+          <h2>Projetos do hub</h2>
+        </div>
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Buscar projeto..." />
+          <select id="categoryFilter" aria-label="Filtrar por categoria">
+            <option value="all">Todas categorias</option>
+            <option value="bot">Bots</option>
+            <option value="complexo">Complexos</option>
+            <option value="app">Apps</option>
+            <option value="doc">Docs</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="projectGrid"></div>
+    </section>
+
+    <section class="section split" id="complexos">
+      <div>
+        <p class="eyebrow">Nível avançado</p>
+        <h2>Sistemas complexos</h2>
+        <p>
+          Projetos maiores, com módulos, logs, IA opcional, permissões e foco em uso real.
+          Eles são o próximo passo depois dos bots simples.
+        </p>
+      </div>
+      <div class="feature-list">
+        <article>
+          <span>🛡️</span>
+          <div><strong>Moderation OS</strong><p>Score, confiança, contexto, appeals, staff assistant e reputação.</p></div>
+        </article>
+        <article>
+          <span>🧱</span>
+          <div><strong>Roblox Rigid Verification</strong><p>Verificação rígida usando somente dados públicos do Roblox.</p></div>
+        </article>
+        <article>
+          <span>🎵</span>
+          <div><strong>Music Station Bot</strong><p>Fila, rádio, URL direta permitida, DJ mode, volume e loop.</p></div>
+        </article>
       </div>
     </section>
 
-    <section id="apps" class="section">
-      <h2>🌐 Apps web</h2>
-      <div class="grid">
-        <article class="card"><h3>Dev Toolbox Web</h3><p>JSON formatter, Base64, UUID e utilidades rápidas.</p><span class="tag">HTML/CSS/JS</span></article>
-        <article class="card"><h3>Prompt Library</h3><p>Biblioteca de prompts seguros para IA, estudo e dev.</p><span class="tag">JSON/Data</span></article>
-        <article class="card"><h3>Bot Status Dashboard</h3><p>Starter de painel para status e cards dos bots.</p><span class="tag">Dashboard</span></article>
+    <section class="section" id="apps">
+      <p class="eyebrow">Web</p>
+      <h2>Apps e ferramentas</h2>
+      <div class="grid mini-grid">
+        <article class="card"><h3>Dev Toolbox Web</h3><p>JSON formatter, Base64, UUID e utilidades rápidas.</p></article>
+        <article class="card"><h3>Prompt Library</h3><p>Prompts seguros para IA, estudos, dev e criação.</p></article>
+        <article class="card"><h3>Bot Status Dashboard</h3><p>Starter para painel de status dos bots.</p></article>
+        <article class="card"><h3>Script Catalog</h3><p>Catálogo visual de bots, apps, docs e templates.</p></article>
       </div>
     </section>
 
-    <section id="docs" class="section">
-      <h2>📚 Documentação</h2>
-      <ul class="docs">
+    <section class="section split" id="docs">
+      <div>
+        <p class="eyebrow">Documentação</p>
+        <h2>Guias para manter o projeto organizado</h2>
+        <p>
+          A documentação ajuda a lembrar onde o projeto está, o que testar e como evoluir sem virar bagunça.
+        </p>
+      </div>
+      <ul class="docs-list">
         <li>ROADMAP.md</li>
+        <li>README.md</li>
         <li>architecture/</li>
         <li>test-cases/</li>
-        <li>docs/GETTING_STARTED.md</li>
-        <li>docs/PROJECT_CHECKLIST.md</li>
+        <li>complexos/README.md</li>
+        <li>bots/README.md</li>
         <li>SECURITY.md</li>
       </ul>
+    </section>
+
+    <section class="section future" id="futuro">
+      <p class="eyebrow">Próximo arco</p>
+      <h2>O que pensar depois</h2>
+      <div class="future-grid">
+        <article><strong>Testar</strong><span>Rodar bots em servidor privado e corrigir runtime.</span></article>
+        <article><strong>Polir</strong><span>Melhorar READMEs, prints, GIFs e comandos.</span></article>
+        <article><strong>Profissionalizar</strong><span>SQLite, GitHub Actions, Docker e releases.</span></article>
+        <article><strong>Evoluir</strong><span>Dashboard, Site Pro React/Vite e sistemas maiores.</span></article>
+      </div>
     </section>
   </main>
 

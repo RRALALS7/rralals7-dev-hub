@@ -1,0 +1,27 @@
+{
+  "name": "rralals7-bot-suite",
+  "version": "1.0.0",
+  "description": "Suite de bots Discord do RRALALS7 Dev Hub: tickets, auto-cargos, Roblox lookup, anti-scam, sorteios e enquetes.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js",
+    "register": "node src/register-commands.js"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "nodejs",
+    "roblox",
+    "tickets",
+    "anti-scam",
+    "rralals7"
+  ],
+  "author": "RRALALS7",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "discord.js": "^14.17.3",
+    "dotenv": "^16.4.7"
+  }
+}

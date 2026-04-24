@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Toolbox Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="badge">🧰 RRALALS7 Dev Hub</p>
+      <h1>Dev Toolbox Web</h1>
+      <p>Ferramentas rápidas para devs.</p>
+    </header>
+
+    <section class="tool">
+      <h2>JSON Formatter</h2>
+      <textarea id="jsonInput" placeholder='Cole JSON aqui...'></textarea>
+      <button onclick="formatJson()">Formatar JSON</button>
+      <pre id="jsonOutput"></pre>
+    </section>
+
+    <section class="tool">
+      <h2>Base64</h2>
+      <textarea id="baseInput" placeholder="Texto..."></textarea>
+      <button onclick="encodeBase64()">Encode</button>
+      <button onclick="decodeBase64()">Decode</button>
+      <pre id="baseOutput"></pre>
+    </section>
+
+    <section class="tool">
+      <h2>Utilidades</h2>
+      <button onclick="generateUuid()">Gerar UUID</button>
+      <button onclick="timestampNow()">Timestamp agora</button>
+      <pre id="utilsOutput"></pre>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

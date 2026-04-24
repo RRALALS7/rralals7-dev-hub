@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080816;
+  color: #f8fafc;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 18px;
+}
+
+.badge {
+  color: #c4b5fd;
+}
+
+.tool {
+  background: #111127;
+  border: 1px solid #27274a;
+  border-radius: 18px;
+  padding: 18px;
+  margin: 18px 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  background: #050511;
+  color: #f8fafc;
+  border: 1px solid #27274a;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+button {
+  margin: 8px 8px 8px 0;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: #050511;
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 40px;
+}

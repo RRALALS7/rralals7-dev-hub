@@ -1,23 +1,29 @@
-# 🎵 Music Station Bot — Complexo
+# 🎵 Advanced Music Station Bot
 
-> Bot de música avançado para Discord com fila, rádio, DJ mode e controles profissionais.
+> Bot de música complexo inspirado em bots avançados com fila, rádio, DJ mode, Lavalink opcional, providers configuráveis e arquitetura profissional.
 
 ---
 
 ## Objetivo
 
-Criar um bot de música completo, mas seguro e responsável.
+Evoluir o Music Station de um player simples para uma estação musical mais completa.
 
-Este projeto é focado em:
-
-- rádios online permitidas
-- URLs diretas de áudio permitidas
-- arquivos/streams que o servidor tem direito de usar
-- estudo de arquitetura de bot de voz no Discord
+Este projeto deve continuar seguro e responsável: use apenas fontes, rádios, arquivos, playlists e streams que você tem permissão para tocar e que respeitam os termos das plataformas usadas.
 
 ---
 
-## Recursos
+## Modos de execução
+
+| Modo | Descrição |
+|---|---|
+| Local Voice | usa `@discordjs/voice` com URL direta/stream permitido |
+| Radio Mode | toca presets de rádio permitidos |
+| Lavalink Mode | arquitetura preparada para Lavalink opcional |
+| Dashboard-ready | pensado para painel web no futuro |
+
+---
+
+## Recursos atuais
 
 - `/music join`
 - `/music leave`
@@ -36,25 +42,49 @@ Este projeto é focado em:
 
 ---
 
-## Recursos complexos
+## Recursos avançados planejados
 
-- fila por servidor
-- estado por guild
-- modo DJ
-- permissões configuráveis
-- presets de rádio
-- loop de faixa/fila
-- proteção contra fila gigante
-- logs opcionais
-- estrutura modular
+- Lavalink opcional
+- playlists permitidas
+- histórico por servidor
+- favoritos por servidor
+- votoskip
+- filtros de áudio quando suportado
+- painel com botões
+- dashboard web opcional
+- sistema de permissões DJ
+- limite de fila por cargo
+- logs de música
+- bloqueio de fontes não permitidas
+
+---
+
+## Arquitetura ideal
+
+```txt
+music-station-bot/
+├── src/
+│   ├── index.js
+│   ├── player.js
+│   ├── providers/
+│   │   ├── direct-url-provider.js
+│   │   ├── radio-provider.js
+│   │   └── lavalink-provider.js
+│   ├── services/
+│   │   ├── queue-service.js
+│   │   ├── permission-service.js
+│   │   └── history-service.js
+│   └── config/
+│       └── radios.js
+```
 
 ---
 
 ## Uso responsável
 
-Não use este bot para tocar conteúdo sem permissão.
+Não use o bot para burlar restrições, baixar conteúdo sem permissão ou violar termos de plataformas.
 
-Evite fontes que violem regras de plataformas, direitos autorais ou termos de serviço.
+O foco do projeto é arquitetura, comunidade e uso permitido.
 
 ---
 
@@ -78,38 +108,20 @@ GUILD_ID=id_do_servidor_opcional
 DEFAULT_VOLUME=70
 MAX_QUEUE_SIZE=50
 DJ_ROLE_NAME=DJ
+PLAYER_MODE=local
+LAVALINK_HOST=localhost
+LAVALINK_PORT=2333
+LAVALINK_PASSWORD=youshallnotpass
 ```
 
 ---
 
-## Presets de rádio
+## Próximo passo técnico
 
-Os presets ficam em:
-
-```txt
-src/config/radios.js
-```
-
-Adicione apenas rádios públicas/permitidas.
-
----
-
-## Permissões recomendadas
-
-- Connect
-- Speak
-- Use Voice Activity
-- Send Messages
-- Use Slash Commands
-
----
-
-## Futuro
-
-- painel com botões
-- histórico
-- favoritos por servidor
-- dashboard opcional
-- integração com Lavalink configurável
+1. Separar providers
+2. Criar `queue-service`
+3. Criar histórico local
+4. Criar configuração por guild
+5. Preparar Lavalink opcional
 
 > RRALALS7 sempre ajuda.

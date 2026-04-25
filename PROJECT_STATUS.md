@@ -43,7 +43,7 @@ próximo arco → testar, polir e profissionalizar
 | Auto Roles Bot | `bots/auto-roles-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Giveaway Bot | `bots/giveaway-bot` | ✅ 🧪 | precisa testar timers e reroll |
 | Poll Bot | `bots/poll-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
-| Economy Bot | `bots/economy-bot` | ✅ 🧪 | starter com JSON local |
+| Economy Bot | `bots/economy-bot` | ✅ 🟢 | testado/aprovado; loja corrigida com itens visíveis |
 | Anti Scam Bot | `bots/anti-scam-bot` | ✅ 🧪 | Safe Browsing é opcional |
 | Roblox Public Info Bot | `bots/roblox-public-info-bot` | ✅ 🧪 | usa dados públicos Roblox |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | ✅ 🧪 | usa perfil público Roblox |
@@ -100,6 +100,7 @@ próximo arco → testar, polir e profissionalizar
 | Ticket Bot | `bots/ticket-bot` | Testado e aprovado |
 | Auto Roles Bot | `bots/auto-roles-bot` | Testado e aprovado |
 | Poll Bot | `bots/poll-bot` | Testado e aprovado |
+| Economy Bot | `bots/economy-bot` | Testado e aprovado após correção da loja |
 
 ---
 
@@ -124,11 +125,12 @@ próximo arco → testar, polir e profissionalizar
 | 2 | Ticket Bot | aprovado, bom para demonstrar suporte em comunidade |
 | 3 | Auto Roles Bot | aprovado, bom para demonstrar painel de cargos |
 | 4 | Poll Bot | aprovado, bom para demonstrar enquetes rápidas |
-| 5 | Roblox Rigid Verification | útil e não depende de IA/voz |
-| 6 | Community Master Bot | base all-in-one modular |
-| 7 | Music Station Bot | complexo e chamativo |
-| 8 | Moderation OS | poderoso, mas exige cuidado extra |
-| 9 | Site do Hub | vitrine pública do projeto |
+| 5 | Economy Bot | aprovado, bom para demonstrar sistema de moeda/loja |
+| 6 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 7 | Community Master Bot | base all-in-one modular |
+| 8 | Music Station Bot | complexo e chamativo |
+| 9 | Moderation OS | poderoso, mas exige cuidado extra |
+| 10 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -147,6 +149,7 @@ RRALALS7 Bot Suite → testado e aprovado
 Ticket Bot → testado e aprovado
 Auto Roles Bot → testado e aprovado
 Poll Bot → testado e aprovado
+Economy Bot → testado e aprovado após correção da loja
 ```
 
 > RRALALS7 sempre ajuda.

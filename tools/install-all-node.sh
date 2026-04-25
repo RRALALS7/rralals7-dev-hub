@@ -5,9 +5,11 @@ set +u
 ROOT="$(pwd)"
 FAIL=0
 
-printf "Installing all Node projects...\n"
+printf "Installing all Node projects for CI...\n"
+printf "Mode: npm install --ignore-scripts --no-audit --no-fund\n"
+printf "Reason: CI checks package validity without running native build scripts.\n"
 
-PKG_LIST="$(find . -type f -name package.json | sort)"
+PKG_LIST="$(find . -type f -name package.json -not -path "*/node_modules/*" | sort)"
 
 for pkg in $PKG_LIST; do
   DIR="$(dirname "$pkg")"
@@ -23,7 +25,7 @@ for pkg in $PKG_LIST; do
     continue
   fi
 
-  npm install
+  npm install --ignore-scripts --no-audit --no-fund
   NPM_STATUS=$?
 
   if [ "$NPM_STATUS" -ne 0 ]; then

@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const { REST, Routes, SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 
 const command = new SlashCommandBuilder()
   .setName('music')
@@ -40,7 +40,6 @@ const command = new SlashCommandBuilder()
   .addSubcommand(sub => sub
     .setName('djmode')
     .setDescription('Ativa/desativa DJ mode')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
     .addBooleanOption(opt => opt.setName('ativo').setDescription('Ativar?').setRequired(true)));
 
 async function main() {

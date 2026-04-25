@@ -17,6 +17,7 @@ Agora o foco é:
 - arquitetura de projetos
 - segurança e uso responsável
 - portfólio forte para dev
+- site/vitrine real para apresentar tudo
 
 > RRALALS7 sempre ajuda.
 
@@ -30,7 +31,9 @@ Agora o foco é:
 | Regras de segurança | Feito |
 | Guia de contribuição | Feito |
 | Templates de ideia/roadmap | Feito |
-| Site inicial | Feito |
+| Template de feedback por issue | Feito |
+| Site/vitrine do hub | Feito |
+| PROJECT_STATUS.md | Feito |
 | Docs gerais | Feito |
 | Architecture docs | Feito |
 | Test cases | Feito |
@@ -60,22 +63,22 @@ Agora o foco é:
 
 | Sistema | Status |
 |---|---|
+| AI Moderation Guard / Moderation OS | Feito/Starter avançado |
+| Community Master Bot | Feito/Starter modular |
 | Roblox Rigid Verification | Feito/Starter avançado |
-| AI Moderation Guard | Feito/Starter avançado |
-| Moderation OS modular | Em evolução |
 | Music Station Bot | Feito/Starter avançado |
 
 ---
 
-## ✅ Fase 4 — Apps web
+## ✅ Fase 4 — Apps web e site
 
-| App | Status |
+| App/Site | Status |
 |---|---|
+| Site principal do Hub | Vitrine funcional |
 | Dev Toolbox Web | Starter funcional |
 | Prompt Library | Starter com dados |
 | Bot Status Dashboard | Starter planejado |
 | Script Catalog | Starter planejado |
-| Site principal do Hub | Starter funcional |
 
 ---
 
@@ -83,13 +86,14 @@ Agora o foco é:
 
 Prioridade agora:
 
-1. Rodar cada bot em servidor privado
+1. Rodar os bots principais em servidor privado
 2. Corrigir erros de runtime
 3. Conferir permissões do Discord
 4. Testar `.env.example`
 5. Testar registro de comandos
 6. Criar screenshots/GIFs
 7. Melhorar README de cada projeto com imagens
+8. Marcar projetos testados em `PROJECT_STATUS.md`
 
 ---
 
@@ -98,7 +102,7 @@ Prioridade agora:
 Para cada bot:
 
 - [ ] `npm install` ou `pip install -r requirements.txt`
-- [ ] configurar `.env`
+- [ ] configurar `.env` local/Secrets
 - [ ] registrar comandos
 - [ ] bot online
 - [ ] comandos respondendo
@@ -155,6 +159,7 @@ Para cada bot:
 
 ### Complexos nível futuro
 
+- Community Master Bot com tickets, sorteios e leaderboard
 - AI Moderation Guard com dashboard
 - Music Station com Lavalink opcional
 - Roblox Verification com histórico de usernames

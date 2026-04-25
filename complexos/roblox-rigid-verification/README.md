@@ -4,6 +4,17 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+🛠️ Bug de registro de comandos corrigido
+```
+
+O registro de comandos foi corrigido removendo permissões inválidas em subcomandos. A proteção continua sendo feita em runtime no handler.
+
+---
+
 ## O que ele faz
 
 Quando alguém entra no servidor:
@@ -52,6 +63,18 @@ npm start
 | `/verify check` | confere código no perfil público |
 | `/verify status` | mostra status |
 | `/verify reset` | staff reseta usuário |
+
+---
+
+## Permissões em runtime
+
+| Comando | Permissão exigida |
+|---|---|
+| `/verify setup` | Administrator |
+| `/verify reset` | Manage Guild |
+| `/verify start` | público |
+| `/verify check` | público |
+| `/verify status` | público |
 
 ---
 

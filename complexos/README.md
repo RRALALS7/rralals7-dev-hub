@@ -25,8 +25,8 @@ A pasta `complexos/` contém projetos maiores, com:
 
 | Projeto | Pasta | Stack | Status |
 |---|---|---|---|
-| Moderation OS / AI Moderation Guard | [`ai-moderation-guard`](./ai-moderation-guard) | Node.js + Groq opcional | Starter avançado funcional |
-| Community Master Bot | [`community-master-bot`](./community-master-bot) | Node.js modular | Starter funcional |
+| Moderation OS / AI Moderation Guard | [`ai-moderation-guard`](./ai-moderation-guard) | Node.js + Groq opcional | Corrigido, precisa teste final |
+| Community Master Bot | [`community-master-bot`](./community-master-bot) | Node.js modular | ✅ Testado e aprovado |
 | Roblox Rigid Verification | [`roblox-rigid-verification`](./roblox-rigid-verification) | Node.js | Starter avançado funcional |
 | Music Station Bot | [`music-station-bot`](./music-station-bot) | Node.js + Voice | Starter avançado funcional |
 
@@ -51,6 +51,7 @@ A pasta `complexos/` contém projetos maiores, com:
 - Economy module
 - Polls module
 - Estrutura modular pronta para tickets, sorteios e moderação leve
+- Primeiro complexo validado em ambiente real
 
 ### Roblox Rigid Verification
 
@@ -102,6 +103,6 @@ Obrigatório:
 
 ## Próximo ponto fixo
 
-Testar os sistemas complexos em servidor privado e transformar os pontos estáveis em versões com SQLite.
+Depois do Community Master Bot aprovado, o próximo foco é validar os outros complexos e transformar os pontos estáveis em versões com SQLite.
 
 > RRALALS7 sempre ajuda.

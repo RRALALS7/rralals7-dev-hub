@@ -2,12 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
-
-const shopChoices = [
-  { name: 'VIP Fake — 500 coins', value: 'vip' },
-  { name: 'Badge Gamer — 250 coins', value: 'badge' },
-  { name: 'Caixa Misteriosa — 100 coins', value: 'crate' }
-];
+const { shop } = require('./shop');
 
 const commands = [
   new SlashCommandBuilder()
@@ -27,17 +22,28 @@ const commands = [
 
   new SlashCommandBuilder()
     .setName('shop')
-    .setDescription('Mostra a loja ficticia com itens e precos'),
+    .setDescription('Mostra a loja ficticia'),
 
   new SlashCommandBuilder()
     .setName('buy')
-    .setDescription('Compra item ficticio da loja')
+    .setDescription('Compra item ficticio')
     .addStringOption(opt =>
       opt
         .setName('item')
-        .setDescription('Escolha o item da loja')
+        .setDescription('Item da loja')
         .setRequired(true)
-        .addChoices(...shopChoices)
+        .addChoices(...shop.map(item => ({ name: `${item.name} (${item.price} coins)`, value: item.id })))
+    ),
+
+  new SlashCommandBuilder()
+    .setName('use')
+    .setDescription('Usa um item do seu inventario')
+    .addStringOption(opt =>
+      opt
+        .setName('item')
+        .setDescription('Item para usar')
+        .setRequired(true)
+        .addChoices(...shop.map(item => ({ name: item.name, value: item.id })))
     ),
 
   new SlashCommandBuilder()

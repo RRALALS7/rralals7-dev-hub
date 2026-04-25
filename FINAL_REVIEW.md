@@ -16,7 +16,9 @@ O repositório deixou de ser apenas um catálogo de ideias e virou um hub com:
 - documentação técnica
 - casos de teste
 - roadmap atualizado
+- painel geral em `PROJECT_STATUS.md`
 - site/vitrine pesquisável
+- template de feedback por issue
 - regras de segurança e contribuição
 
 > RRALALS7 sempre ajuda.
@@ -37,6 +39,7 @@ O repositório deixou de ser apenas um catálogo de ideias e virou um hub com:
 | `docs/` | documentação geral |
 | `site/` | vitrine web atualizada do hub |
 | `templates/` | modelos para novas ideias/projetos |
+| `.github/ISSUE_TEMPLATE/` | template de feedback sobre bots/projetos |
 
 ---
 
@@ -44,19 +47,24 @@ O repositório deixou de ser apenas um catálogo de ideias e virou um hub com:
 
 ### README principal
 
-Atualizado para refletir o ponto atual do projeto: bots, complexos, apps, arquitetura e segurança.
+Atualizado para refletir o ponto atual do projeto: bots, complexos, apps, arquitetura, segurança, status e feedback.
 
-### Remoção da fase antiga
+### Project Status
 
-A pasta antiga `ideas/` foi removida e as referências principais foram atualizadas.
+`PROJECT_STATUS.md` foi criado como painel geral do projeto com:
+
+- projetos feitos
+- projetos em evolução
+- projetos que precisam testar
+- prioridades do próximo arco
 
 ### Roadmap
 
-`ROADMAP.md` foi refeito com:
+`ROADMAP.md` foi alinhado com:
 
 - fases concluídas
 - bots prontos
-- sistemas complexos
+- quatro sistemas complexos
 - apps web
 - checklist de teste real
 - ideias futuras para pensar depois
@@ -67,13 +75,14 @@ A pasta `site/` foi atualizada para uma vitrine moderna com:
 
 - hero atualizado
 - estatísticas do projeto
+- 4 sistemas complexos no contador
 - catálogo pesquisável
 - filtro por categoria
 - bots
 - complexos
 - apps
 - docs
-- próxima fase
+- seção de futuro/próximo arco
 
 ### Apps web
 
@@ -90,7 +99,7 @@ Foram criados/organizados bots simples em Node.js e Python.
 
 ### Sistemas complexos
 
-Foram criados sistemas avançados em `complexos/`, incluindo moderação, verificação Roblox rígida e música.
+Foram criados sistemas avançados em `complexos/`, incluindo moderação, verificação Roblox rígida, música e bot all-in-one modular.
 
 ---
 
@@ -118,6 +127,7 @@ Foram criados sistemas avançados em `complexos/`, incluindo moderação, verifi
 | Sistema | Status |
 |---|---|
 | Moderation OS / AI Moderation Guard | Starter avançado funcional |
+| Community Master Bot | Starter modular funcional |
 | Roblox Rigid Verification | Starter avançado funcional |
 | Music Station Bot | Starter avançado funcional |
 
@@ -142,6 +152,35 @@ Regra central:
 
 ```txt
 score alto + confiança baixa = não punir pesado
+```
+
+---
+
+## 🤖 Community Master Bot — estado atual
+
+Bot all-in-one modular com:
+
+- README próprio
+- `.env.example`
+- `package.json`
+- `src/index.js`
+- `src/register-commands.js`
+- core helpers
+- módulo core
+- módulo utility
+- módulo economy
+- módulo polls
+- base pronta para tickets, sorteios, leaderboard e moderação leve
+
+Comandos atuais:
+
+```txt
+/master-status
+/master-ping
+/master-avatar
+/master-balance
+/master-daily
+/master-poll
 ```
 
 ---
@@ -201,6 +240,9 @@ A vitrine em `site/` agora possui:
 - busca de projetos
 - filtro por categoria
 - links para READMEs
+- Community Master Bot no catálogo
+- Project Status no catálogo
+- contador atualizado para 4 sistemas complexos
 - seção de futuro/próximo arco
 
 Categorias do catálogo:
@@ -220,7 +262,7 @@ A revisão atual é estrutural e por leitura. Os bots dependem de ambiente real 
 
 É necessário testar:
 
-- tokens
+- tokens via `.env` local ou Secrets
 - permissões
 - comandos slash
 - intents
@@ -257,7 +299,7 @@ O site está bom como vitrine estática, mas pode virar:
 - [ ] Rodar cada bot localmente
 - [ ] Rodar `npm install` em cada projeto Node.js
 - [ ] Rodar `pip install -r requirements.txt` nos projetos Python
-- [ ] Configurar `.env`
+- [ ] Configurar `.env` local/Secrets
 - [ ] Registrar comandos em servidor privado
 - [ ] Testar permissões
 - [ ] Testar bots complexos com cuidado
@@ -272,13 +314,14 @@ O site está bom como vitrine estática, mas pode virar:
 
 ## 🚀 Próximo nível recomendado
 
-1. Testar `roblox-rigid-verification` em servidor privado
-2. Testar `music-station-bot` com canal de voz
-3. Testar `ai-moderation-guard` em modo `manual` ou `safe`
-4. Criar workflows de CI
-5. Criar versão SQLite de um bot simples
-6. Melhorar o site para `site-pro/` com React/Vite
-7. Adicionar imagens e GIFs no README principal
+1. Testar `community-master-bot` em servidor privado
+2. Testar `roblox-rigid-verification` em servidor privado
+3. Testar `music-station-bot` com canal de voz
+4. Testar `ai-moderation-guard` em modo `manual` ou `safe`
+5. Criar workflows de CI
+6. Criar versão SQLite de um bot simples
+7. Melhorar o site para `site-pro/` com React/Vite
+8. Adicionar imagens e GIFs no README principal
 
 ---
 
@@ -305,7 +348,7 @@ O site está bom como vitrine estática, mas pode virar:
 O projeto está em um ponto fixo forte:
 
 ```txt
-catálogo antigo → hub real de bots, complexos, apps e docs
+catálogo antigo → hub real de bots, complexos, apps, site e docs
 ```
 
 A primeira grande fase foi concluída.

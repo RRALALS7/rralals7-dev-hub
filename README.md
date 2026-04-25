@@ -2,7 +2,7 @@
 
 > **RRALALS7 sempre ajuda.**
 
-Central pública de **bots prontos, sistemas complexos, automações, ferramentas gamer, utilitários Roblox, IA aplicada e documentação para devs**.
+Central pública de **bots prontos, sistemas complexos, automações, ferramentas gamer, utilitários Roblox, IA aplicada, apps web e documentação para devs**.
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Made by RRALALS7](https://img.shields.io/badge/made%20by-RRALALS7-purple)
@@ -20,6 +20,7 @@ Agora o foco é entregar **projetos reais**, organizados em níveis:
 - bots simples para rodar rápido
 - bots complexos com módulos e arquitetura
 - sistemas de verificação, moderação e música
+- apps web e ferramentas auxiliares
 - templates e documentação para criar novos projetos
 - site/vitrine do Dev Hub
 
@@ -31,11 +32,13 @@ Agora o foco é entregar **projetos reais**, organizados em níveis:
 |---|---|---|
 | 🤖 Bots prontos | [`bots/`](./bots) | Bots simples em Node.js/Python para estudar, adaptar e rodar |
 | 🧬 Bots complexos | [`complexos/`](./complexos) | Sistemas avançados com módulos, logs, IA opcional e configuração |
+| 🌐 Apps web | [`apps/`](./apps) | Ferramentas e starters web |
 | 🧠 Arquitetura | [`architecture/`](./architecture) | Explicações técnicas dos sistemas |
 | 🧪 Casos de teste | [`test-cases/`](./test-cases) | Testes, edge cases e prevenção de falso positivo |
 | 🧰 Templates | [`templates/`](./templates) | Modelos de roadmap, ideia e documentação |
 | 📚 Docs | [`docs/`](./docs) | Guias gerais do projeto |
-| 🌐 Site | [`site/`](./site) | Vitrine web simples do Dev Hub |
+| 🌐 Site | [`site/`](./site) | Vitrine web do Dev Hub |
+| 📌 Status | [`PROJECT_STATUS.md`](./PROJECT_STATUS.md) | Painel geral do estado dos projetos |
 | 🗺️ Roadmap | [`ROADMAP.md`](./ROADMAP.md) | Prioridades e direção do projeto |
 
 ---
@@ -52,6 +55,7 @@ Agora o foco é entregar **projetos reais**, organizados em níveis:
 - Anti Scam Bot
 - Roblox Public Info Bot
 - Roblox Verify Bot
+- Study Helper Bot
 - Minecraft Status Bot Python
 - Game Tournament Bot
 - RRALALS7 Bot Suite
@@ -68,7 +72,15 @@ Veja tudo em [`bots/`](./bots).
   - Staff Assistant
   - Appeal System
   - Reputation System
+  - Mention/Reply moderation planejado
   - Groq opcional
+
+- **Community Master Bot**
+  - core modular
+  - utilidades
+  - economy
+  - polls
+  - base all-in-one para crescer
 
 - **Roblox Rigid Verification**
   - cargo Não Verificado
@@ -83,9 +95,24 @@ Veja tudo em [`bots/`](./bots).
   - DJ mode
   - volume
   - loop
-  - controles completos
+  - plano para providers e Lavalink opcional
 
 Veja tudo em [`complexos/`](./complexos).
+
+---
+
+## 📌 Status do projeto
+
+Para ver o estado geral de cada bot, sistema, app e documentação, abra:
+
+[`PROJECT_STATUS.md`](./PROJECT_STATUS.md)
+
+Esse arquivo mostra:
+
+- o que está feito
+- o que está em evolução
+- o que precisa testar
+- prioridades do próximo arco
 
 ---
 
@@ -109,13 +136,25 @@ O foco é: **aprender, criar, proteger, automatizar com responsabilidade e ajuda
 
 ## 🚀 Como usar
 
-1. Escolha uma pasta em [`bots/`](./bots) ou [`complexos/`](./complexos)
+1. Escolha uma pasta em [`bots/`](./bots), [`complexos/`](./complexos) ou [`apps/`](./apps)
 2. Leia o `README.md` do projeto escolhido
-3. Configure o `.env.example`
+3. Configure variáveis de ambiente quando necessário
 4. Instale dependências
 5. Registre comandos quando for bot Discord
-6. Teste em servidor privado
+6. Teste em ambiente privado
 7. Adapte para seu uso
+
+---
+
+## ✅ Checks rápidos
+
+O repo possui GitHub Actions para checar:
+
+- instalação dos projetos Node.js
+- sintaxe JavaScript
+- compilação Python
+
+Também existem scripts em [`tools/`](./tools) para ajudar em checks locais.
 
 ---
 
@@ -125,12 +164,20 @@ O projeto agora deve focar em:
 
 - testar os bots em ambiente real
 - polir o site
-- criar GitHub Actions
 - criar versões SQLite dos bots maiores
 - melhorar documentação dos complexos
 - adicionar screenshots/GIFs dos comandos funcionando
+- criar releases/versionamento
 
 Acompanhe também a issue de roadmap: [`#1`](https://github.com/RRALALS7/rralals7-dev-hub/issues/1)
+
+---
+
+## 💬 Feedback
+
+Quer comentar, reclamar, sugerir melhoria ou dizer o que achou de algum bot?
+
+Abra uma issue usando o template de feedback quando disponível.
 
 ---
 

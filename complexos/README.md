@@ -26,6 +26,7 @@ A pasta `complexos/` contém projetos maiores, com:
 | Projeto | Pasta | Stack | Status |
 |---|---|---|---|
 | Moderation OS / AI Moderation Guard | [`ai-moderation-guard`](./ai-moderation-guard) | Node.js + Groq opcional | Starter avançado funcional |
+| Community Master Bot | [`community-master-bot`](./community-master-bot) | Node.js modular | Starter funcional |
 | Roblox Rigid Verification | [`roblox-rigid-verification`](./roblox-rigid-verification) | Node.js | Starter avançado funcional |
 | Music Station Bot | [`music-station-bot`](./music-station-bot) | Node.js + Voice | Starter avançado funcional |
 
@@ -36,10 +37,20 @@ A pasta `complexos/` contém projetos maiores, com:
 ### Moderation OS
 
 - AI Message Guard
+- Mention/Reply moderation planejado
+- Detecção de conteúdo inapropriado
 - Staff Assistant
 - Appeal System
 - Reputation System
 - Server Guardian planejado com cuidado extra
+
+### Community Master Bot
+
+- Core module
+- Utility module
+- Economy module
+- Polls module
+- Estrutura modular pronta para tickets, sorteios e moderação leve
 
 ### Roblox Rigid Verification
 
@@ -57,6 +68,7 @@ A pasta `complexos/` contém projetos maiores, com:
 - loop
 - volume
 - controles de voz
+- plano de evolução para providers e Lavalink opcional
 
 ---
 

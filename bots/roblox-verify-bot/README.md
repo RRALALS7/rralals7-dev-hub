@@ -4,6 +4,14 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+---
+
 ## Como funciona
 
 1. Usuário usa `/verify start username:SeuUsuario`
@@ -26,9 +34,17 @@
 
 ## Segurança
 
-- Nunca pede senha
-- Nunca pede cookie
-- Nunca pede token
 - Usa somente dados públicos
+- Foco em verificação simples e segura para comunidades
+
+---
+
+## Melhorias futuras talvez...
+
+Espere por algo mais interessante.
+
+Nem tudo precisa ser revelado agora.
+
+---
 
 > RRALALS7 sempre ajuda.

@@ -47,7 +47,7 @@ próximo arco → testar, polir e profissionalizar
 | Anti Scam Bot | `bots/anti-scam-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Roblox Public Info Bot | `bots/roblox-public-info-bot` | ✅ 🟢 | testado e aprovado com dados públicos Roblox |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | ✅ 🟢 | testado e aprovado; melhorias futuras talvez... |
-| Study Helper Bot | `bots/study-helper-bot` | ✅ 🧪 | flashcards e quiz simples |
+| Study Helper Bot | `bots/study-helper-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | ✅ 🧪 | precisa testar servidor Minecraft real |
 | Game Tournament Bot | `bots/game-tournament-bot` | ✅ 🧪 | precisa testar torneios por guild |
 | RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | ✅ 🟢 | testado e aprovado em ambiente real |
@@ -104,6 +104,7 @@ próximo arco → testar, polir e profissionalizar
 | Anti Scam Bot | `bots/anti-scam-bot` | Testado e aprovado |
 | Roblox Public Info Bot | `bots/roblox-public-info-bot` | Testado e aprovado |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | Testado e aprovado |
+| Study Helper Bot | `bots/study-helper-bot` | Testado e aprovado |
 
 ---
 
@@ -132,11 +133,12 @@ próximo arco → testar, polir e profissionalizar
 | 6 | Anti Scam Bot | aprovado, bom para demonstrar proteção defensiva |
 | 7 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
 | 8 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
-| 9 | Roblox Rigid Verification | útil e não depende de IA/voz |
-| 10 | Community Master Bot | base all-in-one modular |
-| 11 | Music Station Bot | complexo e chamativo |
-| 12 | Moderation OS | poderoso, mas exige cuidado extra |
-| 13 | Site do Hub | vitrine pública do projeto |
+| 9 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
+| 10 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 11 | Community Master Bot | base all-in-one modular |
+| 12 | Music Station Bot | complexo e chamativo |
+| 13 | Moderation OS | poderoso, mas exige cuidado extra |
+| 14 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -159,6 +161,7 @@ Economy Bot → testado e aprovado após correção da loja
 Anti Scam Bot → testado e aprovado
 Roblox Public Info Bot → testado e aprovado
 Roblox Verify Bot → testado e aprovado
+Study Helper Bot → testado e aprovado
 ```
 
 > RRALALS7 sempre ajuda.

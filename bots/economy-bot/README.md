@@ -9,6 +9,7 @@
 ```txt
 ✅ Testado e aprovado em ambiente real
 ⚙️ Loja corrigida para mostrar itens e escolhas no /buy
+✨ Itens agora possuem efeitos com /use
 ```
 
 Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
@@ -22,6 +23,7 @@ Este bot já passou por teste prático e foi aprovado para entrar na lista de pr
 - `/sendcoins`
 - `/shop`
 - `/buy`
+- `/use`
 - `/inventory`
 - `/leaderboard`
 
@@ -29,13 +31,35 @@ Este bot já passou por teste prático e foi aprovado para entrar na lista de pr
 
 ## Itens da loja
 
-| ID | Item | Preço | Descrição |
-|---|---|---:|---|
-| `vip` | VIP Fake | 500 | Tag ficticia de destaque para brincadeira |
-| `badge` | Badge Gamer | 250 | Insignia ficticia para mostrar no inventario |
-| `crate` | Caixa Misteriosa | 100 | Item surpresa ficticio para eventos |
+| ID | Item | Preço | Consumível | Efeito |
+|---|---|---:|---|---|
+| `vip` | VIP Fake | 500 | Não | Mostra um cartão VIP estiloso com seu nome |
+| `badge` | Badge Gamer | 250 | Não | Exibe uma badge gamer com brilho |
+| `crate` | Caixa Misteriosa | 100 | Sim | Abre e dá entre 50 e 300 coins fictícias |
 
 No Discord, o comando `/buy` mostra os itens como escolhas para evitar erro digitando ID.
+
+---
+
+## Como usar os itens
+
+Depois de comprar um item, use:
+
+```txt
+/use item:<item>
+```
+
+Exemplos:
+
+```txt
+/use item:vip
+/use item:badge
+/use item:crate
+```
+
+Itens permanentes, como `vip` e `badge`, não são consumidos.
+
+Itens consumíveis, como `crate`, saem do inventário depois de usados.
 
 ---
 
@@ -65,5 +89,6 @@ npm start
 - cooldown configurável do daily
 - ranking por servidor
 - recompensas por evento
+- sistema de equipar/remover item cosmético
 
 > RRALALS7 sempre ajuda.

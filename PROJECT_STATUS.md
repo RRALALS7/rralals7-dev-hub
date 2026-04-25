@@ -61,7 +61,7 @@ próximo arco → testar, polir e profissionalizar
 |---|---|---|---|
 | Moderation OS / AI Guard | `complexos/ai-moderation-guard` | ✅ 🟡 🧪 | corrigido; ainda exige teste final de moderação |
 | Community Master Bot | `complexos/community-master-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
-| Roblox Rigid Verification | `complexos/roblox-rigid-verification` | ✅ 🟡 🧪 | cargos/canal/logs/verificação rígida |
+| Roblox Rigid Verification | `complexos/roblox-rigid-verification` | ✅ 🟢 | testado/aprovado; bug de registro corrigido |
 | Music Station Bot | `complexos/music-station-bot` | ✅ 🟡 🧪 | música com fila, rádio, DJ mode e plano Lavalink |
 
 ---
@@ -108,6 +108,7 @@ próximo arco → testar, polir e profissionalizar
 | Study Helper Bot | `bots/study-helper-bot` | Testado e aprovado |
 | Game Tournament Bot | `bots/game-tournament-bot` | Testado e aprovado |
 | Community Master Bot | `complexos/community-master-bot` | Testado e aprovado |
+| Roblox Rigid Verification | `complexos/roblox-rigid-verification` | Testado e aprovado após correção do registro |
 
 ---
 
@@ -128,18 +129,18 @@ próximo arco → testar, polir e profissionalizar
 
 | Prioridade | Projeto | Motivo |
 |---|---|---|
-| 1 | Community Master Bot | primeiro complexo aprovado, merece prints/GIFs e release |
-| 2 | RRALALS7 Bot Suite | aprovado, merece prints/GIFs e release |
-| 3 | Ticket Bot | aprovado, bom para demonstrar suporte em comunidade |
-| 4 | Auto Roles Bot | aprovado, bom para demonstrar painel de cargos |
-| 5 | Poll Bot | aprovado, bom para demonstrar enquetes rápidas |
-| 6 | Economy Bot | aprovado, bom para demonstrar sistema de moeda/loja |
-| 7 | Anti Scam Bot | aprovado, bom para demonstrar proteção defensiva |
-| 8 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
-| 9 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
-| 10 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
-| 11 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
-| 12 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 1 | Community Master Bot | complexo aprovado, merece prints/GIFs e release |
+| 2 | Roblox Rigid Verification | complexo aprovado, ótimo para comunidades Roblox |
+| 3 | RRALALS7 Bot Suite | aprovado, merece prints/GIFs e release |
+| 4 | Ticket Bot | aprovado, bom para demonstrar suporte em comunidade |
+| 5 | Auto Roles Bot | aprovado, bom para demonstrar painel de cargos |
+| 6 | Poll Bot | aprovado, bom para demonstrar enquetes rápidas |
+| 7 | Economy Bot | aprovado, bom para demonstrar sistema de moeda/loja |
+| 8 | Anti Scam Bot | aprovado, bom para demonstrar proteção defensiva |
+| 9 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
+| 10 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
+| 11 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
+| 12 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
 | 13 | Music Station Bot | complexo e chamativo |
 | 14 | Moderation OS | poderoso, mas exige cuidado extra |
 | 15 | Site do Hub | vitrine pública do projeto |
@@ -168,6 +169,7 @@ Roblox Verify Bot → testado e aprovado
 Study Helper Bot → testado e aprovado
 Game Tournament Bot → testado e aprovado
 Community Master Bot → testado e aprovado
+Roblox Rigid Verification → testado e aprovado após correção do registro
 ```
 
 > RRALALS7 sempre ajuda.

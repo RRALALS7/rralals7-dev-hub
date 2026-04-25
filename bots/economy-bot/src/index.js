@@ -4,14 +4,10 @@ dotenv.config();
 const fs = require('fs');
 const path = require('path');
 const { Client, EmbedBuilder, GatewayIntentBits } = require('discord.js');
+const { shop } = require('./shop');
 
 const dataDir = path.join(__dirname, '..', 'data');
 const dataFile = path.join(dataDir, 'economy.json');
-const shop = [
-  { id: 'vip', name: 'VIP Fake', price: 500, description: 'Tag ficticia de destaque para brincadeira.' },
-  { id: 'badge', name: 'Badge Gamer', price: 250, description: 'Insignia ficticia para mostrar no inventario.' },
-  { id: 'crate', name: 'Caixa Misteriosa', price: 100, description: 'Item surpresa ficticio para eventos.' }
-];
 
 function ensureData() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
@@ -36,10 +32,6 @@ function user(data, guildId, userId) {
   data[guildId] ||= {};
   data[guildId][userId] ||= { coins: 0, lastDaily: 0, inventory: [] };
   return data[guildId][userId];
-}
-
-function findItem(id) {
-  return shop.find(entry => entry.id === id);
 }
 
 function embed(title, description) {
@@ -90,34 +82,66 @@ client.on('interactionCreate', async interaction => {
     }
 
     if (interaction.commandName === 'shop') {
-      const text = shop
-        .map(item => `**${item.id}** — **${item.name}**\nPreço: ${item.price} coins\n${item.description}`)
-        .join('\n\n');
-
-      return interaction.reply({
-        embeds: [embed('🛒 Loja ficticia', `${text}\n\nUse **/buy** e escolha um item na lista.`)]
-      });
+      const lines = shop.map(item => `**${item.name}** (\`${item.id}\`) — ${item.price} coins\n${item.description}`);
+      return interaction.reply({ embeds: [embed('🛒 Loja ficticia', lines.join('\n\n'))] });
     }
 
     if (interaction.commandName === 'buy') {
       const id = interaction.options.getString('item');
-      const item = findItem(id);
+      const item = shop.find(entry => entry.id === id);
       if (!item) return interaction.reply({ content: 'Item nao encontrado.', ephemeral: true });
       if (profile.coins < item.price) return interaction.reply({ content: 'Saldo insuficiente.', ephemeral: true });
       profile.coins -= item.price;
       profile.inventory.push(item.id);
       writeData(data);
-      return interaction.reply({ embeds: [embed('✅ Compra feita', `Voce comprou **${item.name}** por **${item.price} coins**.`)] });
+      return interaction.reply({ embeds: [embed('✅ Compra feita', `Voce comprou **${item.name}**. Use \`/use item:${item.id}\` para usar.`)] });
     }
 
     if (interaction.commandName === 'inventory') {
-      const text = profile.inventory.length
-        ? profile.inventory.map(id => {
-            const item = findItem(id);
-            return `- ${item ? item.name : id}`;
-          }).join('\n')
-        : 'Inventario vazio.';
-      return interaction.reply({ embeds: [embed('🎒 Inventario', text)], ephemeral: true });
+      if (!profile.inventory.length) {
+        return interaction.reply({ embeds: [embed('🎒 Inventario', 'Inventario vazio. Compre algo na `/shop`.')], ephemeral: true });
+      }
+
+      const counts = {};
+      for (const id of profile.inventory) counts[id] = (counts[id] || 0) + 1;
+      const lines = Object.entries(counts).map(([id, qty]) => {
+        const item = shop.find(entry => entry.id === id);
+        const label = item ? item.name : id;
+        const tag = item && item.consumable ? ' (consumivel)' : '';
+        return `- **${label}**${tag} ×${qty}`;
+      });
+
+      return interaction.reply({ embeds: [embed('🎒 Inventario', lines.join('\n'))], ephemeral: true });
+    }
+
+    if (interaction.commandName === 'use') {
+      const id = interaction.options.getString('item');
+      const item = shop.find(entry => entry.id === id);
+      if (!item) return interaction.reply({ content: 'Item desconhecido.', ephemeral: true });
+      const idx = profile.inventory.indexOf(id);
+      if (idx === -1) return interaction.reply({ content: `Voce nao tem **${item.name}** no inventario.`, ephemeral: true });
+
+      if (id === 'crate') {
+        const reward = Math.floor(Math.random() * 251) + 50;
+        profile.coins += reward;
+        profile.inventory.splice(idx, 1);
+        writeData(data);
+        return interaction.reply({ embeds: [embed('📦 Caixa Misteriosa aberta', `Voce ganhou **${reward} coins ficticias**!\nSaldo atual: **${profile.coins} coins**.`)] });
+      }
+
+      if (id === 'vip') {
+        return interaction.reply({ embeds: [
+          embed(`💎 Cartao VIP de ${interaction.user.username}`, `╔═══════════════╗\n║   ★ VIP FAKE ★   ║\n║                 ║\n║  Holder: ${interaction.user.username}\n║  Status: Ativo\n╚═══════════════╝\n\n*Item permanente, nao consumido.*`)
+        ] });
+      }
+
+      if (id === 'badge') {
+        return interaction.reply({ embeds: [
+          embed(`🎮 Badge Gamer de ${interaction.user.username}`, `🏆 ✨ 🎮 ✨ 🏆\n**${interaction.user.username}** equipou a Badge Gamer.\n*Item permanente, nao consumido.*`)
+        ] });
+      }
+
+      return interaction.reply({ content: 'Esse item nao tem efeito definido ainda.', ephemeral: true });
     }
 
     if (interaction.commandName === 'leaderboard') {

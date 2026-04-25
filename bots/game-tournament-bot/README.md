@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/tournament create` — cria torneio
@@ -62,5 +72,17 @@ GUILD_ID=id_do_servidor_opcional
 - Apenas admins podem criar/encerrar torneios
 - Não envolve apostas ou dinheiro real
 - Ideal para eventos de comunidade
+
+---
+
+## Próximos upgrades possíveis
+
+- times/duplas
+- MD3/MD5
+- sistema de placar
+- confirmação de resultado pelos dois jogadores
+- logs de partidas
+- histórico de torneios
+- ranking de campeões
 
 > RRALALS7 sempre ajuda.

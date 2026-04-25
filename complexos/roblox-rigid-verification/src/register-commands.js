@@ -1,15 +1,14 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const { REST, Routes, SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 
 const command = new SlashCommandBuilder()
   .setName('verify')
   .setDescription('Sistema rígido de verificação Roblox')
   .addSubcommand(sub => sub
     .setName('setup')
-    .setDescription('Cria cargos, canais e painel de verificação')
-    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator))
+    .setDescription('Cria cargos, canais e painel de verificação (admin)'))
   .addSubcommand(sub => sub
     .setName('start')
     .setDescription('Inicia verificação por Roblox')
@@ -22,8 +21,7 @@ const command = new SlashCommandBuilder()
     .setDescription('Mostra seu status de verificação'))
   .addSubcommand(sub => sub
     .setName('reset')
-    .setDescription('Reseta a verificação de um membro')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
+    .setDescription('Reseta a verificação de um membro (staff)')
     .addUserOption(opt => opt.setName('usuario').setDescription('Usuário').setRequired(true)));
 
 async function main() {

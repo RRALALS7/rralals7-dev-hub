@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/roles setup`
@@ -48,5 +58,15 @@ O bot cria um painel com menu para os membros escolherem cargos.
 - O cargo do bot precisa estar acima dos cargos que ele vai entregar
 - Não coloque cargos administrativos no painel
 - Teste antes em servidor privado
+
+---
+
+## Próximos upgrades possíveis
+
+- logs de cargos adicionados/removidos
+- limite de escolhas por categoria
+- categorias de cargos por tema
+- painel com botões além de menu
+- modo cargo único por grupo
 
 > RRALALS7 sempre ajuda.

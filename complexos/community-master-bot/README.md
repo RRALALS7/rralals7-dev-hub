@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este foi o primeiro sistema da pasta `complexos/` marcado como validado no RRALALS7 Dev Hub.
+
+---
+
 ## Objetivo
 
 Criar um bot central para servidor com vários módulos úteis em uma única base organizada.
@@ -130,5 +140,7 @@ npm start
 - configuração por servidor
 - dashboard opcional
 - banco SQLite
+- leaderboard de economy
+- painel de módulos por servidor
 
 > RRALALS7 sempre ajuda.

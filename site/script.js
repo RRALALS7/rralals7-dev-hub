@@ -91,6 +91,13 @@ const projects = [
     url: '../complexos/ai-moderation-guard/README.md'
   },
   {
+    title: '🤖 Community Master Bot',
+    description: 'All-in-one modular com core, utilidades, economy, polls e base para crescer.',
+    tag: 'Complexo',
+    category: 'complexo',
+    url: '../complexos/community-master-bot/README.md'
+  },
+  {
     title: '🧱 Roblox Rigid Verification',
     description: 'Verificação rígida com cargos, canal automático e logs.',
     tag: 'Complexo',
@@ -131,6 +138,13 @@ const projects = [
     tag: 'App',
     category: 'app',
     url: '../apps/script-catalog/README.md'
+  },
+  {
+    title: '📌 Project Status',
+    description: 'Painel geral do que está feito, em evolução e precisa testar.',
+    tag: 'Doc',
+    category: 'doc',
+    url: '../PROJECT_STATUS.md'
   },
   {
     title: '🗺️ Roadmap Oficial',

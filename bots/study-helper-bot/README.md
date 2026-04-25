@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/study add`
@@ -37,5 +47,16 @@ npm start
 /study quiz
 /study list
 ```
+
+---
+
+## Próximos upgrades possíveis
+
+- categorias de matérias
+- pontuação por acerto
+- modo revisão diária
+- ranking de estudos
+- exportar flashcards
+- importar lista de perguntas
 
 > RRALALS7 sempre ajuda.

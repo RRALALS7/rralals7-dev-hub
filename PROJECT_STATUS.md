@@ -49,7 +49,7 @@ próximo arco → testar, polir e profissionalizar
 | Roblox Verify Bot | `bots/roblox-verify-bot` | ✅ 🟢 | testado e aprovado; melhorias futuras talvez... |
 | Study Helper Bot | `bots/study-helper-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | ✅ 🧪 | precisa testar servidor Minecraft real |
-| Game Tournament Bot | `bots/game-tournament-bot` | ✅ 🧪 | precisa testar torneios por guild |
+| Game Tournament Bot | `bots/game-tournament-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | ✅ 🟢 | testado e aprovado em ambiente real |
 
 ---
@@ -105,6 +105,7 @@ próximo arco → testar, polir e profissionalizar
 | Roblox Public Info Bot | `bots/roblox-public-info-bot` | Testado e aprovado |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | Testado e aprovado |
 | Study Helper Bot | `bots/study-helper-bot` | Testado e aprovado |
+| Game Tournament Bot | `bots/game-tournament-bot` | Testado e aprovado |
 
 ---
 
@@ -134,11 +135,12 @@ próximo arco → testar, polir e profissionalizar
 | 7 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
 | 8 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
 | 9 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
-| 10 | Roblox Rigid Verification | útil e não depende de IA/voz |
-| 11 | Community Master Bot | base all-in-one modular |
-| 12 | Music Station Bot | complexo e chamativo |
-| 13 | Moderation OS | poderoso, mas exige cuidado extra |
-| 14 | Site do Hub | vitrine pública do projeto |
+| 10 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
+| 11 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 12 | Community Master Bot | base all-in-one modular |
+| 13 | Music Station Bot | complexo e chamativo |
+| 14 | Moderation OS | poderoso, mas exige cuidado extra |
+| 15 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -162,6 +164,7 @@ Anti Scam Bot → testado e aprovado
 Roblox Public Info Bot → testado e aprovado
 Roblox Verify Bot → testado e aprovado
 Study Helper Bot → testado e aprovado
+Game Tournament Bot → testado e aprovado
 ```
 
 > RRALALS7 sempre ajuda.

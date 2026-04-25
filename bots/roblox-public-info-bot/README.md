@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/roblox info`
@@ -41,5 +51,16 @@ npm start
 - Não pede cookie
 - Não pede token
 - Não acessa conta de ninguém
+- Ideal para consulta informativa em comunidades Roblox
+
+---
+
+## Próximos upgrades possíveis
+
+- mostrar data de criação da conta
+- mostrar descrição pública
+- cache simples para reduzir chamadas repetidas
+- logs de consultas administrativas
+- cards mais bonitos com thumbnail/avatar
 
 > RRALALS7 sempre ajuda.

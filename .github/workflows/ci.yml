@@ -1,0 +1,43 @@
+name: CI Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  node-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install all Node projects
+        run: bash tools/install-all-node.sh
+
+      - name: Check JS syntax
+        run: node tools/check-node-syntax.js
+
+  python-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps if any
+        run: |
+          find . -name "requirements.txt" -exec pip install -r {} \;
+
+      - name: Compile Python
+        run: python -m compileall .

@@ -1,37 +1,45 @@
 #!/usr/bin/env bash
-set -u
+set +e
+set +u
 
-ROOT=$(pwd)
+ROOT="$(pwd)"
 FAIL=0
 
-printf "🚀 Installing all Node projects...\n\n"
+printf "Installing all Node projects...\n"
 
-while IFS= read -r pkg; do
-  DIR=$(dirname "$pkg")
-  printf "\n📦 Installing in %s\n" "$DIR"
+PKG_LIST="$(find . -type f -name package.json | sort)"
 
-  cd "$ROOT/$DIR" || {
-    printf "❌ Failed to enter %s\n" "$DIR"
+for pkg in $PKG_LIST; do
+  DIR="$(dirname "$pkg")"
+  printf "\nInstalling in %s\n" "$DIR"
+
+  cd "$ROOT/$DIR"
+  CD_STATUS=$?
+
+  if [ "$CD_STATUS" -ne 0 ]; then
+    printf "FAILED_TO_ENTER %s exit=%s\n" "$DIR" "$CD_STATUS"
     FAIL=1
-    cd "$ROOT" || exit 1
+    cd "$ROOT"
     continue
-  }
-
-  if npm install; then
-    printf "✅ Install OK in %s\n" "$DIR"
-  else
-    printf "❌ Install FAILED in %s\n" "$DIR"
-    FAIL=1
   fi
 
-  cd "$ROOT" || exit 1
-done < <(find . -type f -name "package.json" | sort)
+  npm install
+  NPM_STATUS=$?
 
-printf "\n"
+  if [ "$NPM_STATUS" -ne 0 ]; then
+    printf "INSTALL_FAILED %s exit=%s\n" "$DIR" "$NPM_STATUS"
+    FAIL=1
+  else
+    printf "INSTALL_OK %s\n" "$DIR"
+  fi
 
-if [ "$FAIL" -eq 1 ]; then
-  printf "⚠️ One or more Node project installs failed. Check the project marked with ❌ above.\n"
+  cd "$ROOT"
+done
+
+printf "\nInstall summary status=%s\n" "$FAIL"
+
+if [ "$FAIL" -ne 0 ]; then
   exit 1
 fi
 
-printf "✅ All Node project installs completed successfully.\n"
+exit 0

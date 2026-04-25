@@ -1,6 +1,9 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+process.on('unhandledRejection', err => console.error('[unhandledRejection]', err));
+process.on('uncaughtException', err => console.error('[uncaughtException]', err));
+
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');

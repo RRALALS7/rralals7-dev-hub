@@ -1,13 +1,24 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, PermissionFlagsBits } = require('discord.js');
+
+const STAFF_SUBCOMMANDS = {
+  mode: PermissionFlagsBits.ManageGuild,
+  analyze: PermissionFlagsBits.ManageMessages,
+  panic_on: PermissionFlagsBits.ManageGuild,
+  panic_off: PermissionFlagsBits.ManageGuild,
+  staff_analyze: PermissionFlagsBits.ManageMessages,
+  appeal_review: PermissionFlagsBits.ManageGuild,
+  rep_reset: PermissionFlagsBits.ManageGuild
+};
 const { readData, writeData, getGuild } = require('./core/database');
 const { embed } = require('./core/ui');
 const { handleMessageGuard, analyzeText } = require('./modules/ai-message-guard');
 const { handleStaffCommand } = require('./modules/staff-assistant');
 const { handleAppealCommand } = require('./modules/appeal-system');
 const { handleReputationCommand } = require('./modules/reputation-system');
+const { handleGuardianCommand } = require('./modules/server-guardian');
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
@@ -40,6 +51,11 @@ client.on('interactionCreate', async interaction => {
     const data = readData();
     const guildData = getGuild(data, interaction.guildId);
     const sub = interaction.options.getSubcommand();
+
+    const requiredPerm = STAFF_SUBCOMMANDS[sub];
+    if (requiredPerm && !interaction.memberPermissions?.has(requiredPerm)) {
+      return interaction.reply({ content: '🚫 Sem permissão para esse subcomando (apenas staff).', ephemeral: true });
+    }
 
     if (sub === 'status') {
       return interaction.reply({
@@ -76,6 +92,10 @@ client.on('interactionCreate', async interaction => {
 
     if (sub === 'staff_analyze') {
       return handleStaffCommand(interaction, guildData);
+    }
+
+    if (['guardian_status', 'panic_on', 'panic_off'].includes(sub)) {
+      return handleGuardianCommand(interaction, guildData, () => save(data));
     }
 
     if (['appeal_open', 'appeal_status', 'appeal_review'].includes(sub)) {

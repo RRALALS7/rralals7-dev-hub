@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/ticket setup`
@@ -52,5 +62,15 @@ STAFF_ROLE_ID=id_do_cargo_staff_opcional
 - Teste antes em servidor privado
 - Não publique seu `.env`
 - Deixe o cargo do bot acima dos cargos que ele precisa gerenciar
+
+---
+
+## Próximos upgrades possíveis
+
+- transcript de tickets
+- logs de abertura/fechamento
+- motivo de fechamento
+- avaliação de atendimento
+- categorias diferentes por tipo de suporte
 
 > RRALALS7 sempre ajuda.

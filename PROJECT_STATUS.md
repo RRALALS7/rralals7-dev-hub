@@ -40,7 +40,7 @@ próximo arco → testar, polir e profissionalizar
 | Projeto | Caminho | Status | Observação |
 |---|---|---|---|
 | Ticket Bot | `bots/ticket-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
-| Auto Roles Bot | `bots/auto-roles-bot` | ✅ 🧪 | precisa testar menu/cargos |
+| Auto Roles Bot | `bots/auto-roles-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Giveaway Bot | `bots/giveaway-bot` | ✅ 🧪 | precisa testar timers e reroll |
 | Poll Bot | `bots/poll-bot` | ✅ 🧪 | precisa testar reações |
 | Economy Bot | `bots/economy-bot` | ✅ 🧪 | starter com JSON local |
@@ -98,6 +98,7 @@ próximo arco → testar, polir e profissionalizar
 |---|---|---|
 | RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | Testado e aprovado |
 | Ticket Bot | `bots/ticket-bot` | Testado e aprovado |
+| Auto Roles Bot | `bots/auto-roles-bot` | Testado e aprovado |
 
 ---
 
@@ -120,11 +121,12 @@ próximo arco → testar, polir e profissionalizar
 |---|---|---|
 | 1 | RRALALS7 Bot Suite | aprovado, merece prints/GIFs e release |
 | 2 | Ticket Bot | aprovado, bom para demonstrar suporte em comunidade |
-| 3 | Roblox Rigid Verification | útil e não depende de IA/voz |
-| 4 | Community Master Bot | base all-in-one modular |
-| 5 | Music Station Bot | complexo e chamativo |
-| 6 | Moderation OS | poderoso, mas exige cuidado extra |
-| 7 | Site do Hub | vitrine pública do projeto |
+| 3 | Auto Roles Bot | aprovado, bom para demonstrar painel de cargos |
+| 4 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 5 | Community Master Bot | base all-in-one modular |
+| 6 | Music Station Bot | complexo e chamativo |
+| 7 | Moderation OS | poderoso, mas exige cuidado extra |
+| 8 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -141,6 +143,7 @@ Marcos reais de teste concluídos:
 ```txt
 RRALALS7 Bot Suite → testado e aprovado
 Ticket Bot → testado e aprovado
+Auto Roles Bot → testado e aprovado
 ```
 
 > RRALALS7 sempre ajuda.

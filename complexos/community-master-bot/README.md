@@ -16,60 +16,54 @@ Ele não substitui os bots separados do repositório. A ideia é ser uma versão
 
 | Módulo | Função |
 |---|---|
-| Core | status, configuração e informações do bot |
-| Moderation | comandos leves de moderação e logs |
-| Tickets | criação de tickets simples |
-| Giveaways | sorteios básicos |
+| Core | status e informações do bot |
+| Utility | ping e avatar |
 | Polls | enquetes rápidas |
-| Economy | coins fictícias e saldo |
-| Utilities | avatar, ping, userinfo e serverinfo |
+| Economy | coins fictícias, saldo e daily |
 
 ---
 
-## Comandos planejados
+## Comandos atuais
 
 ### Core
 
 ```txt
-/master status
-/master modules
-/master config
+/master-status
 ```
 
 ### Utility
 
 ```txt
-/master ping
-/master avatar
-/master userinfo
-/master serverinfo
+/master-ping
+/master-avatar
 ```
 
 ### Economy
 
 ```txt
-/master balance
-/master daily
-/master leaderboard
+/master-balance
+/master-daily
 ```
 
 ### Poll
 
 ```txt
-/master poll
+/master-poll
 ```
 
 ---
 
-## Arquitetura
+## Arquitetura atual
 
 ```txt
 community-master-bot/
+├── .env.example
+├── package.json
 ├── src/
 │   ├── index.js
 │   ├── register-commands.js
 │   ├── core/
-│   │   ├── database.js
+│   │   ├── db.js
 │   │   └── ui.js
 │   └── modules/
 │       ├── core.js
@@ -77,6 +71,34 @@ community-master-bot/
 │       ├── economy.js
 │       └── polls.js
 ```
+
+---
+
+## Variáveis de ambiente
+
+Copie `.env.example` para `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Depois preencha:
+
+```env
+DISCORD_TOKEN=coloque_o_token_do_bot_aqui
+BOT_TOKEN=opcional_mesmo_valor_do_discord_token
+CLIENT_ID=coloque_o_application_client_id_aqui
+GUILD_ID=opcional_id_do_servidor_para_registro_rapido
+```
+
+Observação:
+
+- `DISCORD_TOKEN` é usado pelo bot.
+- `BOT_TOKEN` é aceito como alternativa.
+- `CLIENT_ID` é necessário para registrar comandos.
+- `GUILD_ID` é opcional e ajuda comandos aparecerem mais rápido em um servidor de teste.
+
+Nunca publique seu `.env` real.
 
 ---
 

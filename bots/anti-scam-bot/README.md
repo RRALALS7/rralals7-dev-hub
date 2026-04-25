@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/checklink`
@@ -40,5 +50,16 @@ npm start
 - Resultado é indicação de risco, não sentença absoluta
 - Não use para perseguir usuários
 - Ideal para proteção de comunidade
+- Sempre revise falsos positivos antes de punir alguém
+
+---
+
+## Próximos upgrades possíveis
+
+- logs de links verificados
+- modo automático com canal de logs
+- painel de whitelist/blacklist
+- score de risco por domínio
+- integração opcional com mais provedores de reputação
 
 > RRALALS7 sempre ajuda.

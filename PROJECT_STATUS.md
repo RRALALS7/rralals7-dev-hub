@@ -17,6 +17,7 @@ criar bots simples → feito
 criar complexos → feito
 criar apps web → feito
 atualizar site → feito
+bots testados/aprovados → em andamento
 próximo arco → testar, polir e profissionalizar
 ```
 
@@ -27,6 +28,7 @@ próximo arco → testar, polir e profissionalizar
 | Status | Significado |
 |---|---|
 | ✅ Feito | Criado e organizado no repo |
+| 🟢 Testado | Rodado em ambiente real e aprovado |
 | 🟡 Em evolução | Funcional como starter, mas ainda pode crescer |
 | 🧪 Precisa testar | Precisa rodar em ambiente real |
 | 💡 Futuro | Ideia para próxima fase |
@@ -37,7 +39,7 @@ próximo arco → testar, polir e profissionalizar
 
 | Projeto | Caminho | Status | Observação |
 |---|---|---|---|
-| Ticket Bot | `bots/ticket-bot` | ✅ 🧪 | precisa testar permissões/canais |
+| Ticket Bot | `bots/ticket-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Auto Roles Bot | `bots/auto-roles-bot` | ✅ 🧪 | precisa testar menu/cargos |
 | Giveaway Bot | `bots/giveaway-bot` | ✅ 🧪 | precisa testar timers e reroll |
 | Poll Bot | `bots/poll-bot` | ✅ 🧪 | precisa testar reações |
@@ -48,7 +50,7 @@ próximo arco → testar, polir e profissionalizar
 | Study Helper Bot | `bots/study-helper-bot` | ✅ 🧪 | flashcards e quiz simples |
 | Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | ✅ 🧪 | precisa testar servidor Minecraft real |
 | Game Tournament Bot | `bots/game-tournament-bot` | ✅ 🧪 | precisa testar torneios por guild |
-| RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | ✅ 🟡 | base multiuso |
+| RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | ✅ 🟢 | testado e aprovado em ambiente real |
 
 ---
 
@@ -86,18 +88,29 @@ próximo arco → testar, polir e profissionalizar
 | `test-cases/` | ✅ | edge cases e prevenção de falso positivo |
 | `bot-plans/` | ✅ | arquivo de planejamento técnico |
 | `ideias-prontas/` | ✅ | arquivo histórico/rascunho |
+| `site/README.md` | ✅ | documentação da vitrine web |
+
+---
+
+## Projetos testados/aprovados
+
+| Projeto | Caminho | Resultado |
+|---|---|---|
+| RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | Testado e aprovado |
+| Ticket Bot | `bots/ticket-bot` | Testado e aprovado |
 
 ---
 
 ## Próximas prioridades
 
-1. Testar bots principais em ambiente real
-2. Corrigir erros de runtime
-3. Melhorar READMEs com prints/GIFs
-4. Criar versões SQLite dos bots maiores
-5. Evoluir o site para uma vitrine ainda mais completa
-6. Criar releases/versionamento
-7. Profissionalizar com GitHub Actions e checks extras
+1. Criar prints/GIFs dos bots já aprovados
+2. Testar mais bots principais em ambiente real
+3. Corrigir erros de runtime encontrados
+4. Melhorar READMEs dos projetos testados
+5. Criar versões SQLite dos bots maiores
+6. Evoluir o site para uma vitrine ainda mais completa
+7. Criar releases/versionamento
+8. Profissionalizar com GitHub Actions e checks extras
 
 ---
 
@@ -105,11 +118,13 @@ próximo arco → testar, polir e profissionalizar
 
 | Prioridade | Projeto | Motivo |
 |---|---|---|
-| 1 | Roblox Rigid Verification | útil e não depende de IA/voz |
-| 2 | Community Master Bot | base all-in-one modular |
-| 3 | Music Station Bot | complexo e chamativo |
-| 4 | Moderation OS | poderoso, mas exige cuidado extra |
-| 5 | Site do Hub | vitrine pública do projeto |
+| 1 | RRALALS7 Bot Suite | aprovado, merece prints/GIFs e release |
+| 2 | Ticket Bot | aprovado, bom para demonstrar suporte em comunidade |
+| 3 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 4 | Community Master Bot | base all-in-one modular |
+| 5 | Music Station Bot | complexo e chamativo |
+| 6 | Moderation OS | poderoso, mas exige cuidado extra |
+| 7 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -119,6 +134,13 @@ O projeto está em estado forte de portfólio e pronto para o próximo arco:
 
 ```txt
 testar → corrigir → polir → profissionalizar
+```
+
+Marcos reais de teste concluídos:
+
+```txt
+RRALALS7 Bot Suite → testado e aprovado
+Ticket Bot → testado e aprovado
 ```
 
 > RRALALS7 sempre ajuda.

@@ -1,42 +1,87 @@
-# 🛡️ AI Moderation Guard
+# 🛡️ Moderation OS — AI Moderation Guard
 
-> Sistema avançado de moderação com score, confiança, contexto e IA opcional via Groq.
+> Sistema avançado de moderação inspirado em bots profissionais, com IA opcional, contexto, score, confiança e arquitetura modular.
 
 ---
 
-## Ideia principal
+## Evolução do sistema
 
-O bot não pune por uma mensagem solta sem contexto.
+O AI Moderation Guard evoluiu para um sistema estilo Moderation OS.
 
-Ele usa:
+Agora inclui:
 
-- filtro local
-- contexto recente
-- score
+- AI Message Guard
+- Mention/Reply Moderation
+- Detecção de conteúdo inapropriado
+- Score + confiança
+- Contexto recente
+- Modos configuráveis
+- Logs detalhados
+- Base para dashboard
+
+---
+
+## Novos módulos
+
+### 🧠 AI Message Guard
+
+Analisa mensagens com:
+
+- heurísticas locais
+- IA opcional (Groq)
+- score de risco
 - confiança
-- modo configurável
-- logs
-- ação progressiva
+
+---
+
+### 🔔 Mention / Reply Moderation
+
+Detecta:
+
+- spam de menção
+- assédio via reply
+- flood direcionado
+
+Ações:
+
+- log
+- aviso
+- bloqueio leve
+
+---
+
+### ⚠️ Detecção de conteúdo inapropriado
+
+Detecta:
+
+- linguagem ofensiva
+- conteúdo sensível
+- spam
+- comportamento suspeito
+
+Sempre com:
+
+```txt
+score + confiança + contexto
+```
 
 ---
 
 ## Score
 
-| Score | Significado | Ação padrão safe |
-|---|---|---|
-| 0-20 | seguro | nada |
-| 21-40 | suspeito | log silencioso |
-| 41-60 | risco médio | log + aviso leve |
-| 61-80 | alto risco | revisão/log |
-| 81-100 | crítico | revisão urgente |
+| Score | Ação |
+|---|---|
+| 0-20 | ignorar |
+| 21-40 | log |
+| 41-60 | aviso |
+| 61-80 | revisão |
+| 81-100 | ação forte (se permitido) |
 
 ---
 
 ## Confiança
 
-Se a confiança for baixa, o bot reduz a ação.
-
-Regra de ouro:
+Regra central:
 
 ```txt
 score alto + confiança baixa = não punir pesado
@@ -46,31 +91,39 @@ score alto + confiança baixa = não punir pesado
 
 ## Modos
 
-- `manual`: só recomenda para staff
-- `safe`: logs e avisos leves
-- `balanced`: ações moderadas
-- `strict`: ações fortes somente se configurado
-
-Padrão: `safe`
+- manual
+- safe
+- balanced
+- strict
 
 ---
 
-## Instalação
+## Arquitetura
 
-```bash
-npm install
-cp .env.example .env
-npm run register
-npm start
+```txt
+ai-moderation-guard/
+├── core/
+│   ├── score-engine.js
+│   ├── confidence-engine.js
+│   └── context-engine.js
+├── modules/
+│   ├── message-guard.js
+│   ├── mention-guard.js
+│   ├── reply-guard.js
+│   ├── content-filter.js
+│   ├── staff-assistant.js
+│   ├── appeal-system.js
+│   └── reputation-system.js
 ```
 
 ---
 
-## Segurança
+## Futuro
 
-- Não usar como juiz cego
-- Sempre manter logs
-- Testar em servidor privado
-- Preferir revisão humana para casos graves
+- dashboard web
+- painel de revisão
+- histórico por usuário
+- alertas em tempo real
+- integração com banco de dados
 
-> Sistema de moderação • RRALALS7
+> RRALALS7 sempre ajuda.

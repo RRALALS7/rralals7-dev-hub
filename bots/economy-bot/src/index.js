@@ -8,24 +8,47 @@ const { Client, EmbedBuilder, GatewayIntentBits } = require('discord.js');
 const dataDir = path.join(__dirname, '..', 'data');
 const dataFile = path.join(dataDir, 'economy.json');
 const shop = [
-  { id: 'vip', name: 'VIP Fake', price: 500 },
-  { id: 'badge', name: 'Badge Gamer', price: 250 },
-  { id: 'crate', name: 'Caixa Misteriosa', price: 100 }
+  { id: 'vip', name: 'VIP Fake', price: 500, description: 'Tag ficticia de destaque para brincadeira.' },
+  { id: 'badge', name: 'Badge Gamer', price: 250, description: 'Insignia ficticia para mostrar no inventario.' },
+  { id: 'crate', name: 'Caixa Misteriosa', price: 100, description: 'Item surpresa ficticio para eventos.' }
 ];
 
 function ensureData() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   if (!fs.existsSync(dataFile)) fs.writeFileSync(dataFile, '{}');
 }
-function readData() { ensureData(); try { return JSON.parse(fs.readFileSync(dataFile, 'utf8')); } catch { return {}; } }
-function writeData(data) { ensureData(); fs.writeFileSync(dataFile, JSON.stringify(data, null, 2)); }
+
+function readData() {
+  ensureData();
+  try {
+    return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+function writeData(data) {
+  ensureData();
+  fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
+}
+
 function user(data, guildId, userId) {
   data[guildId] ||= {};
   data[guildId][userId] ||= { coins: 0, lastDaily: 0, inventory: [] };
   return data[guildId][userId];
 }
+
+function findItem(id) {
+  return shop.find(entry => entry.id === id);
+}
+
 function embed(title, description) {
-  return new EmbedBuilder().setColor(0x7c3aed).setTitle(title).setDescription(description).setFooter({ text: 'RRALALS7 sempre ajuda.' }).setTimestamp();
+  return new EmbedBuilder()
+    .setColor(0x7c3aed)
+    .setTitle(title)
+    .setDescription(description)
+    .setFooter({ text: 'RRALALS7 sempre ajuda.' })
+    .setTimestamp();
 }
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -67,22 +90,33 @@ client.on('interactionCreate', async interaction => {
     }
 
     if (interaction.commandName === 'shop') {
-      return interaction.reply({ embeds: [embed('🛒 Loja ficticia', shop.map(item => `**${item.id}** — ${item.name}: ${item.price} coins`).join('\n'))] });
+      const text = shop
+        .map(item => `**${item.id}** — **${item.name}**\nPreço: ${item.price} coins\n${item.description}`)
+        .join('\n\n');
+
+      return interaction.reply({
+        embeds: [embed('🛒 Loja ficticia', `${text}\n\nUse **/buy** e escolha um item na lista.`)]
+      });
     }
 
     if (interaction.commandName === 'buy') {
       const id = interaction.options.getString('item');
-      const item = shop.find(entry => entry.id === id);
+      const item = findItem(id);
       if (!item) return interaction.reply({ content: 'Item nao encontrado.', ephemeral: true });
       if (profile.coins < item.price) return interaction.reply({ content: 'Saldo insuficiente.', ephemeral: true });
       profile.coins -= item.price;
       profile.inventory.push(item.id);
       writeData(data);
-      return interaction.reply({ embeds: [embed('✅ Compra feita', `Voce comprou **${item.name}**.`)] });
+      return interaction.reply({ embeds: [embed('✅ Compra feita', `Voce comprou **${item.name}** por **${item.price} coins**.`)] });
     }
 
     if (interaction.commandName === 'inventory') {
-      const text = profile.inventory.length ? profile.inventory.map(id => `- ${id}`).join('\n') : 'Inventario vazio.';
+      const text = profile.inventory.length
+        ? profile.inventory.map(id => {
+            const item = findItem(id);
+            return `- ${item ? item.name : id}`;
+          }).join('\n')
+        : 'Inventario vazio.';
       return interaction.reply({ embeds: [embed('🎒 Inventario', text)], ephemeral: true });
     }
 

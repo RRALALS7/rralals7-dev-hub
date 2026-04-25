@@ -1,6 +1,9 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+process.on('unhandledRejection', err => console.error('[unhandledRejection]', err));
+process.on('uncaughtException', err => console.error('[uncaughtException]', err));
+
 const { Client, EmbedBuilder, GatewayIntentBits, PermissionFlagsBits } = require('discord.js');
 const radios = require('./config/radios');
 const player = require('./player');

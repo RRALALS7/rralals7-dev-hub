@@ -45,7 +45,7 @@ próximo arco → testar, polir e profissionalizar
 | Poll Bot | `bots/poll-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Economy Bot | `bots/economy-bot` | ✅ 🟢 | testado/aprovado; loja corrigida com itens visíveis |
 | Anti Scam Bot | `bots/anti-scam-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
-| Roblox Public Info Bot | `bots/roblox-public-info-bot` | ✅ 🧪 | usa dados públicos Roblox |
+| Roblox Public Info Bot | `bots/roblox-public-info-bot` | ✅ 🟢 | testado e aprovado com dados públicos Roblox |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | ✅ 🧪 | usa perfil público Roblox |
 | Study Helper Bot | `bots/study-helper-bot` | ✅ 🧪 | flashcards e quiz simples |
 | Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | ✅ 🧪 | precisa testar servidor Minecraft real |
@@ -102,6 +102,7 @@ próximo arco → testar, polir e profissionalizar
 | Poll Bot | `bots/poll-bot` | Testado e aprovado |
 | Economy Bot | `bots/economy-bot` | Testado e aprovado após correção da loja |
 | Anti Scam Bot | `bots/anti-scam-bot` | Testado e aprovado |
+| Roblox Public Info Bot | `bots/roblox-public-info-bot` | Testado e aprovado |
 
 ---
 
@@ -128,11 +129,12 @@ próximo arco → testar, polir e profissionalizar
 | 4 | Poll Bot | aprovado, bom para demonstrar enquetes rápidas |
 | 5 | Economy Bot | aprovado, bom para demonstrar sistema de moeda/loja |
 | 6 | Anti Scam Bot | aprovado, bom para demonstrar proteção defensiva |
-| 7 | Roblox Rigid Verification | útil e não depende de IA/voz |
-| 8 | Community Master Bot | base all-in-one modular |
-| 9 | Music Station Bot | complexo e chamativo |
-| 10 | Moderation OS | poderoso, mas exige cuidado extra |
-| 11 | Site do Hub | vitrine pública do projeto |
+| 7 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
+| 8 | Roblox Rigid Verification | útil e não depende de IA/voz |
+| 9 | Community Master Bot | base all-in-one modular |
+| 10 | Music Station Bot | complexo e chamativo |
+| 11 | Moderation OS | poderoso, mas exige cuidado extra |
+| 12 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -153,6 +155,7 @@ Auto Roles Bot → testado e aprovado
 Poll Bot → testado e aprovado
 Economy Bot → testado e aprovado após correção da loja
 Anti Scam Bot → testado e aprovado
+Roblox Public Info Bot → testado e aprovado
 ```
 
 > RRALALS7 sempre ajuda.

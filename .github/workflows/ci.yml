@@ -18,7 +18,13 @@ jobs:
           node-version: 20
 
       - name: Install all Node projects
-        run: bash tools/install-all-node.sh
+        shell: bash
+        run: |
+          set +e
+          bash tools/install-all-node.sh
+          status=$?
+          echo "install-all-node exit code: $status"
+          exit $status
 
       - name: Check JS syntax
         run: node tools/check-node-syntax.js

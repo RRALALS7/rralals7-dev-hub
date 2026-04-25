@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const { REST, Routes, SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 
 const command = new SlashCommandBuilder()
   .setName('modos')
@@ -11,8 +11,7 @@ const command = new SlashCommandBuilder()
     .setDescription('Mostra status geral do sistema'))
   .addSubcommand(sub => sub
     .setName('mode')
-    .setDescription('Define modo de moderação')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
+    .setDescription('Define modo de moderação (staff)')
     .addStringOption(opt => opt.setName('modo').setDescription('manual, safe, balanced ou strict').setRequired(true)
       .addChoices(
         { name: 'manual', value: 'manual' },
@@ -22,24 +21,20 @@ const command = new SlashCommandBuilder()
       )))
   .addSubcommand(sub => sub
     .setName('analyze')
-    .setDescription('Analisa texto manualmente')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+    .setDescription('Analisa texto manualmente (staff)')
     .addStringOption(opt => opt.setName('texto').setDescription('Texto para analisar').setRequired(true)))
   .addSubcommand(sub => sub
     .setName('guardian_status')
     .setDescription('Mostra status do Server Guardian'))
   .addSubcommand(sub => sub
     .setName('panic_on')
-    .setDescription('Ativa modo pânico e trava canais')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild))
+    .setDescription('Ativa modo pânico e trava canais (staff)'))
   .addSubcommand(sub => sub
     .setName('panic_off')
-    .setDescription('Desativa modo pânico')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild))
+    .setDescription('Desativa modo pânico (staff)'))
   .addSubcommand(sub => sub
     .setName('staff_analyze')
-    .setDescription('Analisa histórico recente de um usuário')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+    .setDescription('Analisa histórico recente de um usuário (staff)')
     .addUserOption(opt => opt.setName('usuario').setDescription('Usuário').setRequired(true)))
   .addSubcommand(sub => sub
     .setName('appeal_open')
@@ -50,8 +45,7 @@ const command = new SlashCommandBuilder()
     .setDescription('Mostra seus pedidos de revisão'))
   .addSubcommand(sub => sub
     .setName('appeal_review')
-    .setDescription('Revisa um appeal')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
+    .setDescription('Revisa um appeal (staff)')
     .addStringOption(opt => opt.setName('id').setDescription('ID do appeal').setRequired(true))
     .addStringOption(opt => opt.setName('status').setDescription('novo status').setRequired(true)
       .addChoices(
@@ -74,8 +68,7 @@ const command = new SlashCommandBuilder()
     .setDescription('Ranking de reputação'))
   .addSubcommand(sub => sub
     .setName('rep_reset')
-    .setDescription('Reseta reputação de um membro')
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
+    .setDescription('Reseta reputação de um membro (staff)')
     .addUserOption(opt => opt.setName('usuario').setDescription('Usuário').setRequired(true)));
 
 async function main() {

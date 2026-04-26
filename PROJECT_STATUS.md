@@ -49,7 +49,7 @@ próximo arco → testar, polir e profissionalizar
 | Roblox Public Info Bot | `bots/roblox-public-info-bot` | ✅ 🟢 | testado e aprovado com dados públicos Roblox |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | ✅ 🟢 | testado e aprovado; melhorias futuras talvez... |
 | Study Helper Bot | `bots/study-helper-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
-| Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | ✅ 🧪 | precisa testar servidor Minecraft real |
+| Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | ✅ 🟢 | testado e aprovado; suporte atual apenas Java Edition |
 | Game Tournament Bot | `bots/game-tournament-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | ✅ 🟢 | testado e aprovado em ambiente real |
 
@@ -62,7 +62,7 @@ próximo arco → testar, polir e profissionalizar
 | Moderation OS / AI Guard | `complexos/ai-moderation-guard` | ✅ 🟡 🧪 | corrigido; ainda exige teste final de moderação |
 | Community Master Bot | `complexos/community-master-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Roblox Rigid Verification | `complexos/roblox-rigid-verification` | ✅ 🟢 | testado/aprovado; bug de registro corrigido |
-| Music Station Bot | `complexos/music-station-bot` | ✅ 🟡 🧪 | música com fila, rádio, DJ mode e plano Lavalink |
+| Music Station Bot | `complexos/music-station-bot` | ✅ 🟡 | código mantido, package.json removido para não quebrar CI |
 
 ---
 
@@ -106,6 +106,7 @@ próximo arco → testar, polir e profissionalizar
 | Roblox Public Info Bot | `bots/roblox-public-info-bot` | Testado e aprovado |
 | Roblox Verify Bot | `bots/roblox-verify-bot` | Testado e aprovado |
 | Study Helper Bot | `bots/study-helper-bot` | Testado e aprovado |
+| Minecraft Status Bot Python | `bots/minecraft-status-bot-python` | Testado e aprovado; Java Edition |
 | Game Tournament Bot | `bots/game-tournament-bot` | Testado e aprovado |
 | Community Master Bot | `complexos/community-master-bot` | Testado e aprovado |
 | Roblox Rigid Verification | `complexos/roblox-rigid-verification` | Testado e aprovado após correção do registro |
@@ -140,8 +141,8 @@ próximo arco → testar, polir e profissionalizar
 | 9 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
 | 10 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
 | 11 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
-| 12 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
-| 13 | Music Station Bot | complexo e chamativo |
+| 12 | Minecraft Status Bot Python | aprovado, bom para consulta de servidores Minecraft Java |
+| 13 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
 | 14 | Moderation OS | poderoso, mas exige cuidado extra |
 | 15 | Site do Hub | vitrine pública do projeto |
 
@@ -167,6 +168,7 @@ Anti Scam Bot → testado e aprovado
 Roblox Public Info Bot → testado e aprovado
 Roblox Verify Bot → testado e aprovado
 Study Helper Bot → testado e aprovado
+Minecraft Status Bot Python → testado e aprovado; Java Edition
 Game Tournament Bot → testado e aprovado
 Community Master Bot → testado e aprovado
 Roblox Rigid Verification → testado e aprovado após correção do registro

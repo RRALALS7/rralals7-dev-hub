@@ -11,15 +11,29 @@ Central pública de **bots prontos, sistemas complexos, automações, ferramenta
 
 ---
 
+## ✅ Ponto fixo atual
+
+O hub chegou em um ponto estável:
+
+```txt
+bots simples → feitos, testados e aprovados
+bugs reais encontrados → corrigidos ou isolados
+complexos principais → validados quando testados
+CI → ajustado para não quebrar com pacote problemático
+MDs → organizados com instalação, uso e observações
+```
+
+Este repositório agora pode ser tratado como um **portfólio funcional**, não apenas como uma lista de ideias.
+
+---
+
 ## ✨ Objetivo
 
-Este repositório não é mais só um catálogo de ideias.
-
-Agora o foco é entregar **projetos reais**, organizados em níveis:
+Entregar projetos reais, organizados em níveis:
 
 - bots simples para rodar rápido
 - bots complexos com módulos e arquitetura
-- sistemas de verificação, moderação e música
+- sistemas de verificação, moderação e comunidade
 - apps web e ferramentas auxiliares
 - templates e documentação para criar novos projetos
 - site/vitrine do Dev Hub
@@ -43,76 +57,76 @@ Agora o foco é entregar **projetos reais**, organizados em níveis:
 
 ---
 
-## 🔥 Projetos em destaque
+## 🤖 Bots simples validados
 
-### 🤖 Bots prontos
-
-- Ticket Bot
-- Auto Roles Bot
-- Giveaway Bot
-- Poll Bot
-- Economy Bot
-- Anti Scam Bot
-- Roblox Public Info Bot
-- Roblox Verify Bot
-- Study Helper Bot
-- Minecraft Status Bot Python
-- Game Tournament Bot
-- RRALALS7 Bot Suite
+| Bot | Status | Observação |
+|---|---|---|
+| RRALALS7 Bot Suite | ✅ Testado | suíte geral aprovada |
+| Ticket Bot | ✅ Testado | suporte por tickets |
+| Auto Roles Bot | ✅ Testado | painel de cargos |
+| Giveaway Bot | ✅ Testado | sorteios por botão |
+| Poll Bot | ✅ Testado | enquetes rápidas |
+| Economy Bot | ✅ Testado | loja/inventário corrigidos |
+| Anti Scam Bot | ✅ Testado | verificação defensiva de links |
+| Roblox Public Info Bot | ✅ Testado | dados públicos Roblox |
+| Roblox Verify Bot | ✅ Testado | verificação por perfil público |
+| Study Helper Bot | ✅ Testado | flashcards e quiz |
+| Minecraft Status Bot Python | ✅ Testado | suporte atual: Java Edition |
+| Game Tournament Bot | ✅ Testado | torneios e chaveamento simples |
 
 Veja tudo em [`bots/`](./bots).
 
 ---
 
-### 🧬 Sistemas complexos
+## 🧬 Sistemas complexos
 
-- **AI Moderation Guard / Moderation OS**
-  - score + confiança
-  - contexto recente
-  - Staff Assistant
-  - Appeal System
-  - Reputation System
-  - Mention/Reply moderation planejado
-  - Groq opcional
-
-- **Community Master Bot**
-  - core modular
-  - utilidades
-  - economy
-  - polls
-  - base all-in-one para crescer
-
-- **Roblox Rigid Verification**
-  - cargo Não Verificado
-  - cargo Verificado
-  - canal automático de verificação
-  - validação por perfil público Roblox
-  - logs de staff
-
-- **Music Station Bot**
-  - fila por servidor
-  - rádio/URL direta permitida
-  - DJ mode
-  - volume
-  - loop
-  - plano para providers e Lavalink opcional
+| Sistema | Status | Observação |
+|---|---|---|
+| Community Master Bot | ✅ Testado | primeiro complexo aprovado |
+| Roblox Rigid Verification | ✅ Testado | bug de registro corrigido |
+| Moderation OS / AI Guard | 🛠️ Corrigido | exige reteste final cuidadoso |
+| Music Station Bot | 🧪 Experimental | código mantido; `package.json` removido para não quebrar CI |
 
 Veja tudo em [`complexos/`](./complexos).
 
 ---
 
-## 📌 Status do projeto
+## 🚀 Como usar qualquer bot Node.js
 
-Para ver o estado geral de cada bot, sistema, app e documentação, abra:
+1. Abra a pasta do bot.
+2. Copie `.env.example` para `.env`.
+3. Preencha `DISCORD_TOKEN`, `CLIENT_ID` e, se quiser registrar rápido em servidor privado, `GUILD_ID`.
+4. Rode:
 
-[`PROJECT_STATUS.md`](./PROJECT_STATUS.md)
+```bash
+npm install
+npm run register
+npm start
+```
 
-Esse arquivo mostra:
+5. Teste os comandos em um servidor privado.
 
-- o que está feito
-- o que está em evolução
-- o que precisa testar
-- prioridades do próximo arco
+---
+
+## 🐍 Como usar bot Python
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env
+python src/main.py
+```
+
+---
+
+## ✅ Checks rápidos
+
+O repo possui GitHub Actions para checar:
+
+- instalação dos projetos Node.js
+- sintaxe JavaScript
+- compilação Python
+
+O bot de música avançado foi isolado do CI removendo o `package.json`, porque dependências de áudio/voz podem quebrar o pipeline. O código segue preservado para refatoração futura.
 
 ---
 
@@ -134,62 +148,22 @@ O foco é: **aprender, criar, proteger, automatizar com responsabilidade e ajuda
 
 ---
 
-## 🚀 Como usar
+## 📌 Status completo
 
-1. Escolha uma pasta em [`bots/`](./bots), [`complexos/`](./complexos) ou [`apps/`](./apps)
-2. Leia o `README.md` do projeto escolhido
-3. Configure variáveis de ambiente quando necessário
-4. Instale dependências
-5. Registre comandos quando for bot Discord
-6. Teste em ambiente privado
-7. Adapte para seu uso
+Para ver o estado geral de cada bot, sistema, app e documentação, abra:
 
----
-
-## ✅ Checks rápidos
-
-O repo possui GitHub Actions para checar:
-
-- instalação dos projetos Node.js
-- sintaxe JavaScript
-- compilação Python
-
-Também existem scripts em [`tools/`](./tools) para ajudar em checks locais.
+[`PROJECT_STATUS.md`](./PROJECT_STATUS.md)
 
 ---
 
 ## 🧩 Próximos passos
 
-O projeto agora deve focar em:
-
-- testar os bots em ambiente real
-- polir o site
-- criar versões SQLite dos bots maiores
-- melhorar documentação dos complexos
-- adicionar screenshots/GIFs dos comandos funcionando
-- criar releases/versionamento
-
-Acompanhe também a issue de roadmap: [`#1`](https://github.com/RRALALS7/rralals7-dev-hub/issues/1)
-
----
-
-## 💬 Feedback
-
-Quer comentar, reclamar, sugerir melhoria ou dizer o que achou de algum bot?
-
-Abra uma issue usando o template de feedback quando disponível.
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas, desde que sigam as regras de uso responsável. Veja [`CONTRIBUTING.md`](./CONTRIBUTING.md).
-
----
-
-## 🛡️ Segurança
-
-Encontrou algo perigoso, abusivo ou mal explicado? Leia [`SECURITY.md`](./SECURITY.md) e reporte com responsabilidade.
+- adicionar prints/GIFs dos bots aprovados
+- criar releases por bot
+- criar versões SQLite para bots com dados persistentes
+- refatorar o Music Station Bot do zero quando for voltar nele
+- evoluir o site/vitrine
+- manter CI verde
 
 ---
 

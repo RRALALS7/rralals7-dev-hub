@@ -1,113 +1,113 @@
 const projects = [
   {
     title: '🎟️ Ticket Bot',
-    description: 'Suporte privado com canais, botões e fechamento organizado.',
-    tag: 'Node.js',
+    description: '✅ Testado. Suporte privado com canais, botões e fechamento organizado.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/ticket-bot/README.md'
   },
   {
     title: '🔐 Auto Roles Bot',
-    description: 'Auto-cargos por menu dropdown com até 10 cargos.',
-    tag: 'Node.js',
+    description: '✅ Testado. Auto-cargos por menu dropdown com até 10 cargos.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/auto-roles-bot/README.md'
   },
   {
     title: '🎁 Giveaway Bot',
-    description: 'Sorteios com botão de participação, lista e reroll.',
-    tag: 'Node.js',
+    description: '✅ Testado. Sorteios com botão de participação, lista e reroll.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/giveaway-bot/README.md'
   },
   {
     title: '🗳️ Poll Bot',
-    description: 'Enquetes com até 5 opções e reações automáticas.',
-    tag: 'Node.js',
+    description: '✅ Testado. Enquetes com até 5 opções e reações automáticas.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/poll-bot/README.md'
   },
   {
     title: '💰 Economy Bot',
-    description: 'Coins fictícias, daily, loja, inventário e ranking.',
-    tag: 'Node.js',
+    description: '✅ Testado. Coins fictícias, daily, loja corrigida, inventário e ranking.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/economy-bot/README.md'
   },
   {
     title: '🛡️ Anti Scam Bot',
-    description: 'Verificação defensiva de links com whitelist e blacklist.',
-    tag: 'Node.js',
+    description: '✅ Testado. Verificação defensiva de links com whitelist e blacklist.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/anti-scam-bot/README.md'
   },
   {
     title: '🧱 Roblox Public Info Bot',
-    description: 'Consulta dados públicos de perfis Roblox com embed bonito.',
-    tag: 'Node.js',
+    description: '✅ Testado. Consulta dados públicos de perfis Roblox com embed bonito.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/roblox-public-info-bot/README.md'
   },
   {
     title: '✅ Roblox Verify Bot',
-    description: 'Verificação Roblox usando apenas dados públicos do perfil.',
-    tag: 'Node.js',
+    description: '✅ Testado. Verificação Roblox usando apenas dados públicos do perfil.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/roblox-verify-bot/README.md'
   },
   {
     title: '📚 Study Helper Bot',
-    description: 'Flashcards e quiz simples para estudos no Discord.',
-    tag: 'Node.js',
+    description: '✅ Testado. Flashcards e quiz simples para estudos no Discord.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/study-helper-bot/README.md'
   },
   {
     title: '🎮 Minecraft Status Bot',
-    description: 'Status público de servidores Minecraft Java em Python.',
-    tag: 'Python',
+    description: '✅ Testado. Status público de servidores Minecraft Java em Python.',
+    tag: 'Python • Java Edition',
     category: 'bot',
     url: '../bots/minecraft-status-bot-python/README.md'
   },
   {
     title: '🏆 Game Tournament Bot',
-    description: 'Torneios, inscrições, participantes e chaveamento simples.',
-    tag: 'Node.js',
+    description: '✅ Testado. Torneios, inscrições, participantes e chaveamento simples.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/game-tournament-bot/README.md'
   },
   {
     title: '🤖 RRALALS7 Bot Suite',
-    description: 'Suite multiuso com tickets, roles, Roblox, sorteios e mais.',
-    tag: 'Node.js',
+    description: '✅ Testado. Suite multiuso com tickets, roles, Roblox, sorteios e mais.',
+    tag: 'Node.js • aprovado',
     category: 'bot',
     url: '../bots/rralals7-bot-suite/README.md'
   },
   {
     title: '🛡️ Moderation OS',
-    description: 'AI Guard com score, confiança, appeals, staff assistant e reputação.',
-    tag: 'Complexo',
+    description: '🛠️ Corrigido. AI Guard com score, confiança, appeals, staff assistant e reputação.',
+    tag: 'Complexo • reteste',
     category: 'complexo',
     url: '../complexos/ai-moderation-guard/README.md'
   },
   {
     title: '🤖 Community Master Bot',
-    description: 'All-in-one modular com core, utilidades, economy, polls e base para crescer.',
-    tag: 'Complexo',
+    description: '✅ Testado. All-in-one modular com core, utilidades, economy, polls e base para crescer.',
+    tag: 'Complexo • aprovado',
     category: 'complexo',
     url: '../complexos/community-master-bot/README.md'
   },
   {
     title: '🧱 Roblox Rigid Verification',
-    description: 'Verificação rígida com cargos, canal automático e logs.',
-    tag: 'Complexo',
+    description: '✅ Testado. Verificação rígida com cargos, canal automático, logs e registro corrigido.',
+    tag: 'Complexo • aprovado',
     category: 'complexo',
     url: '../complexos/roblox-rigid-verification/README.md'
   },
   {
     title: '🎵 Music Station Bot',
-    description: 'Bot de música com fila, rádio, DJ mode, loop e volume.',
-    tag: 'Complexo',
+    description: '🧪 Experimental. Código preservado; package.json removido para não quebrar CI.',
+    tag: 'Complexo • experimental',
     category: 'complexo',
     url: '../complexos/music-station-bot/README.md'
   },
@@ -141,17 +141,24 @@ const projects = [
   },
   {
     title: '📌 Project Status',
-    description: 'Painel geral do que está feito, em evolução e precisa testar.',
+    description: 'Painel geral do que está feito, testado, corrigido, isolado e próximo.',
     tag: 'Doc',
     category: 'doc',
     url: '../PROJECT_STATUS.md'
   },
   {
     title: '🗺️ Roadmap Oficial',
-    description: 'Mapa do que já foi feito, o que testar e o que pensar depois.',
+    description: 'Mapa do ponto fixo atual, próximas fases e ideias futuras.',
     tag: 'Doc',
     category: 'doc',
     url: '../ROADMAP.md'
+  },
+  {
+    title: '✅ Final Review',
+    description: 'Fechamento oficial: feito, testado, corrigido, explicado e salvo.',
+    tag: 'Doc',
+    category: 'doc',
+    url: '../FINAL_REVIEW.md'
   },
   {
     title: '🏗️ Architecture',

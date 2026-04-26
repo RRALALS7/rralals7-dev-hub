@@ -1,25 +1,24 @@
 # 🗺️ Roadmap Oficial — RRALALS7 Dev Hub
 
-> Este arquivo mostra o que já foi feito, o que está em evolução e ideias futuras para pensar depois.
+> Ponto fixo do projeto após criação, teste, correção e documentação dos bots principais.
 
 ---
 
-## Filosofia atual
+## ✅ Estado atual
 
-O RRALALS7 Dev Hub evoluiu de um catálogo de ideias para uma central de projetos reais.
+O RRALALS7 Dev Hub evoluiu de um catálogo de ideias para uma central real de projetos.
 
-Agora o foco é:
+Ponto atual:
 
-- bots prontos
-- sistemas complexos
-- apps web
-- documentação útil
-- arquitetura de projetos
-- segurança e uso responsável
-- portfólio forte para dev
-- site/vitrine real para apresentar tudo
-
-> RRALALS7 sempre ajuda.
+```txt
+base do hub → feita
+bots simples → feitos, testados e aprovados
+complexos principais → criados, parte validada
+bugs reais → corrigidos ou isolados
+CI → ajustado
+site/vitrine → criado
+MDs principais → atualizados
+```
 
 ---
 
@@ -27,46 +26,46 @@ Agora o foco é:
 
 | Item | Status |
 |---|---|
-| README principal profissional | Feito |
-| Regras de segurança | Feito |
-| Guia de contribuição | Feito |
-| Templates de ideia/roadmap | Feito |
-| Template de feedback por issue | Feito |
-| Site/vitrine do hub | Feito |
-| PROJECT_STATUS.md | Feito |
-| Docs gerais | Feito |
-| Architecture docs | Feito |
-| Test cases | Feito |
+| README principal profissional | ✅ Feito |
+| Regras de segurança | ✅ Feito |
+| Guia de contribuição | ✅ Feito |
+| Templates de ideia/roadmap | ✅ Feito |
+| Template de feedback por issue | ✅ Feito |
+| Site/vitrine do hub | ✅ Feito |
+| PROJECT_STATUS.md | ✅ Feito |
+| Docs gerais | ✅ Feito |
+| Architecture docs | ✅ Feito |
+| Test cases | ✅ Feito |
 
 ---
 
-## ✅ Fase 2 — Bots simples prontos
+## ✅ Fase 2 — Bots simples testados
 
 | Bot | Status |
 |---|---|
-| Ticket Bot | Feito |
-| Auto Roles Bot | Feito |
-| Giveaway Bot | Feito |
-| Poll Bot | Feito |
-| Economy Bot | Feito |
-| Anti Scam Bot | Feito |
-| Roblox Public Info Bot | Feito |
-| Roblox Verify Bot | Feito |
-| Minecraft Status Bot Python | Feito |
-| Game Tournament Bot | Feito |
-| Study Helper Bot | Feito |
-| RRALALS7 Bot Suite | Feito |
+| RRALALS7 Bot Suite | ✅ Testado e aprovado |
+| Ticket Bot | ✅ Testado e aprovado |
+| Auto Roles Bot | ✅ Testado e aprovado |
+| Giveaway Bot | ✅ Testado e aprovado |
+| Poll Bot | ✅ Testado e aprovado |
+| Economy Bot | ✅ Testado e aprovado; loja/inventário corrigidos |
+| Anti Scam Bot | ✅ Testado e aprovado |
+| Roblox Public Info Bot | ✅ Testado e aprovado |
+| Roblox Verify Bot | ✅ Testado e aprovado |
+| Study Helper Bot | ✅ Testado e aprovado |
+| Minecraft Status Bot Python | ✅ Testado e aprovado; Java Edition |
+| Game Tournament Bot | ✅ Testado e aprovado |
 
 ---
 
-## ✅ Fase 3 — Sistemas complexos
+## 🧬 Fase 3 — Sistemas complexos
 
 | Sistema | Status |
 |---|---|
-| AI Moderation Guard / Moderation OS | Feito/Starter avançado |
-| Community Master Bot | Feito/Starter modular |
-| Roblox Rigid Verification | Feito/Starter avançado |
-| Music Station Bot | Feito/Starter avançado |
+| Community Master Bot | ✅ Testado e aprovado |
+| Roblox Rigid Verification | ✅ Testado e aprovado; registro corrigido |
+| AI Moderation Guard / Moderation OS | 🛠️ Corrigido; precisa reteste final cuidadoso |
+| Music Station Bot | 🧪 Experimental; código preservado, package.json removido para não quebrar CI |
 
 ---
 
@@ -74,45 +73,63 @@ Agora o foco é:
 
 | App/Site | Status |
 |---|---|
-| Site principal do Hub | Vitrine funcional |
-| Dev Toolbox Web | Starter funcional |
-| Prompt Library | Starter com dados |
-| Bot Status Dashboard | Starter planejado |
-| Script Catalog | Starter planejado |
+| Site principal do Hub | ✅ Vitrine funcional |
+| Dev Toolbox Web | ✅ Starter funcional |
+| Prompt Library | ✅ Starter com dados |
+| Bot Status Dashboard | ✅ Starter/documentação |
+| Script Catalog | ✅ Starter/documentação |
 
 ---
 
-## 🔥 Próxima fase — Testar e polir
+## 🛠️ Bugs reais corrigidos
 
-Prioridade agora:
-
-1. Rodar os bots principais em servidor privado
-2. Corrigir erros de runtime
-3. Conferir permissões do Discord
-4. Testar `.env.example`
-5. Testar registro de comandos
-6. Criar screenshots/GIFs
-7. Melhorar README de cada projeto com imagens
-8. Marcar projetos testados em `PROJECT_STATUS.md`
+| Área | Correção |
+|---|---|
+| Economy Bot | loja separada, `/buy` com choices, `/use`, itens consumíveis e permanentes |
+| AI Moderation Guard | permissões movidas para runtime, evitando erro em subcomandos |
+| Roblox Rigid Verification | permissões movidas para runtime e handlers globais adicionados |
+| Music Station Bot | problema de instalação isolado removendo package.json do CI |
+| CI Node | script ajustado para instalar projetos sem rodar scripts nativos |
 
 ---
 
-## 🧪 Checklist de teste real
+## 📚 Tutorial padrão mantido
 
-Para cada bot:
+Cada bot deve seguir este padrão:
 
-- [ ] `npm install` ou `pip install -r requirements.txt`
-- [ ] configurar `.env` local/Secrets
-- [ ] registrar comandos
-- [ ] bot online
-- [ ] comandos respondendo
-- [ ] permissões corretas
-- [ ] erros tratados
-- [ ] README atualizado com observações
+```bash
+npm install
+cp .env.example .env
+npm run register
+npm start
+```
+
+Para Python:
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env
+python src/main.py
+```
 
 ---
 
-## 🧠 Ideias futuras para pensar depois
+## Próximo arco
+
+Agora o projeto deve focar em:
+
+1. prints/GIFs de cada bot funcionando
+2. releases por bot
+3. changelog por versão
+4. SQLite nos bots com dados persistentes
+5. site mais bonito e completo
+6. reteste final do Moderation OS
+7. refazer Music Station Bot do zero quando for voltar nele
+8. manter CI verde
+
+---
+
+## Ideias futuras para pensar depois
 
 ### Bots e sistemas
 
@@ -121,14 +138,10 @@ Para cada bot:
 - Tournament Pro com times e MD3/MD5
 - Appeal System mais completo com painel
 - Staff Case Manager
-- Advanced Anti-Raid Guardian
 - Clan Manager Bot
 - Event Reminder Bot
 - Code Helper Bot
 - AI Ticket Helper
-- Voice Room Manager
-- Auto Backup Server Bot
-- Moderation Dashboard
 - Bot Status Monitor real
 
 ### Apps web
@@ -142,14 +155,11 @@ Para cada bot:
 - Dev Toolbox Pro
 - Catálogo visual de projetos
 - Página individual para cada bot
-- Gerador de banners para servidor
 
 ### Infra e qualidade
 
-- GitHub Actions para Node.js
-- GitHub Actions para Python
-- Markdown lint
 - Dependabot
+- Markdown lint
 - Versionamento por releases
 - Changelog automático
 - Migração para SQLite
@@ -157,34 +167,14 @@ Para cada bot:
 - Testes automatizados
 - Dockerfiles para bots principais
 
-### Complexos nível futuro
-
-- Community Master Bot com tickets, sorteios e leaderboard
-- AI Moderation Guard com dashboard
-- Music Station com Lavalink opcional
-- Roblox Verification com histórico de usernames
-- Reputation System com antifraude melhor
-- Server Guardian com modo emergência revisável
-- Staff Assistant com relatórios exportáveis
-
----
-
-## 🎯 Meta de longo prazo
-
-Transformar o RRALALS7 Dev Hub em uma central pública de referência para:
-
-- bots Discord
-- sistemas gamer
-- Roblox utilities
-- segurança defensiva
-- IA aplicada
-- portfólio dev
-- projetos open source em PT-BR
-
 ---
 
 ## Conclusão
 
-A primeira grande etapa está feita. Agora o projeto entra no arco de teste, polimento e evolução profissional.
+O projeto chegou no ponto fixo:
 
-> Criatividade, código e ajuda pra comunidade dev.
+```txt
+feito → testado → corrigido → documentado
+```
+
+> RRALALS7 sempre ajuda.

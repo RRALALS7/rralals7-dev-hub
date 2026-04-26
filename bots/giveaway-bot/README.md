@@ -4,6 +4,16 @@
 
 ---
 
+## Status
+
+```txt
+✅ Testado e aprovado em ambiente real
+```
+
+Este bot já passou por teste prático e foi aprovado para entrar na lista de projetos validados do RRALALS7 Dev Hub.
+
+---
+
 ## Recursos
 
 - `/giveaway create`
@@ -40,5 +50,16 @@ npm start
 - Sem dinheiro real
 - Regras claras no servidor
 - Staff deve revisar sorteios importantes
+
+---
+
+## Próximos upgrades possíveis
+
+- logs de sorteios criados
+- botão para cancelar sorteio
+- sorteios por cargo específico
+- blacklist de participantes
+- histórico de vencedores
+- painel de sorteios ativos
 
 > RRALALS7 sempre ajuda.

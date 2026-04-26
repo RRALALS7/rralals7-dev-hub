@@ -42,7 +42,7 @@ próximo arco → testar, polir e profissionalizar
 |---|---|---|---|
 | Ticket Bot | `bots/ticket-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Auto Roles Bot | `bots/auto-roles-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
-| Giveaway Bot | `bots/giveaway-bot` | ✅ 🧪 | precisa testar timers e reroll |
+| Giveaway Bot | `bots/giveaway-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Poll Bot | `bots/poll-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
 | Economy Bot | `bots/economy-bot` | ✅ 🟢 | testado/aprovado; loja corrigida com itens visíveis |
 | Anti Scam Bot | `bots/anti-scam-bot` | ✅ 🟢 | testado e aprovado em ambiente real |
@@ -100,6 +100,7 @@ próximo arco → testar, polir e profissionalizar
 | RRALALS7 Bot Suite | `bots/rralals7-bot-suite` | Testado e aprovado |
 | Ticket Bot | `bots/ticket-bot` | Testado e aprovado |
 | Auto Roles Bot | `bots/auto-roles-bot` | Testado e aprovado |
+| Giveaway Bot | `bots/giveaway-bot` | Testado e aprovado |
 | Poll Bot | `bots/poll-bot` | Testado e aprovado |
 | Economy Bot | `bots/economy-bot` | Testado e aprovado após correção da loja |
 | Anti Scam Bot | `bots/anti-scam-bot` | Testado e aprovado |
@@ -135,16 +136,17 @@ próximo arco → testar, polir e profissionalizar
 | 3 | RRALALS7 Bot Suite | aprovado, merece prints/GIFs e release |
 | 4 | Ticket Bot | aprovado, bom para demonstrar suporte em comunidade |
 | 5 | Auto Roles Bot | aprovado, bom para demonstrar painel de cargos |
-| 6 | Poll Bot | aprovado, bom para demonstrar enquetes rápidas |
-| 7 | Economy Bot | aprovado, bom para demonstrar sistema de moeda/loja |
-| 8 | Anti Scam Bot | aprovado, bom para demonstrar proteção defensiva |
-| 9 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
-| 10 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
-| 11 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
-| 12 | Minecraft Status Bot Python | aprovado, bom para consulta de servidores Minecraft Java |
-| 13 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
-| 14 | Moderation OS | poderoso, mas exige cuidado extra |
-| 15 | Site do Hub | vitrine pública do projeto |
+| 6 | Giveaway Bot | aprovado, bom para demonstrar sorteios em comunidade |
+| 7 | Poll Bot | aprovado, bom para demonstrar enquetes rápidas |
+| 8 | Economy Bot | aprovado, bom para demonstrar sistema de moeda/loja |
+| 9 | Anti Scam Bot | aprovado, bom para demonstrar proteção defensiva |
+| 10 | Roblox Public Info Bot | aprovado, bom para demonstrar integração pública Roblox |
+| 11 | Roblox Verify Bot | aprovado, com suspense para próximas melhorias |
+| 12 | Study Helper Bot | aprovado, bom para demonstrar estudo/flashcards |
+| 13 | Minecraft Status Bot Python | aprovado, bom para consulta de servidores Minecraft Java |
+| 14 | Game Tournament Bot | aprovado, bom para demonstrar eventos e campeonatos |
+| 15 | Moderation OS | poderoso, mas exige cuidado extra |
+| 16 | Site do Hub | vitrine pública do projeto |
 
 ---
 
@@ -162,6 +164,7 @@ Marcos reais de teste concluídos:
 RRALALS7 Bot Suite → testado e aprovado
 Ticket Bot → testado e aprovado
 Auto Roles Bot → testado e aprovado
+Giveaway Bot → testado e aprovado
 Poll Bot → testado e aprovado
 Economy Bot → testado e aprovado após correção da loja
 Anti Scam Bot → testado e aprovado

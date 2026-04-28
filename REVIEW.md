@@ -1,46 +1,74 @@
 # ✅ Revisão Geral — RRALALS7 Dev Hub
 
-> Revisão inicial dos bots, docs e estrutura do repositório.
+> Revisão histórica do repositório, atualizada para refletir o checkpoint final.
 
 ---
 
 ## Status geral
 
-O repositório já possui uma base grande de documentação, ideias, planos e bots prontos para estudo/adaptação.
+O repositório deixou de ser apenas uma base grande de documentação, ideias e bots para estudo.
+
+Estado atual:
+
+```txt
+hub real → pronto
+bots simples → testados e aprovados
+complexos principais → organizados
+bugs reais → corrigidos ou isolados
+MDs principais → atualizados
+checkpoint final → registrado
+```
 
 ---
 
-## Ajustes feitos nesta revisão
+## Ajustes feitos ao longo da revisão
 
 - Corrigido o Ticket Bot para limpar o estado interno quando um ticket é fechado.
 - Corrigido o Minecraft Status Bot para evitar reutilizar callback de comando dentro de outro comando.
 - Atualizado o índice `bots/README.md` com todos os bots atuais e status realista.
+- Corrigida loja/inventário do Economy Bot.
+- Corrigidas permissões problemáticas em subcomandos do AI Moderation Guard.
+- Corrigidas permissões/handlers do Roblox Rigid Verification.
+- Isolado o problema do Music Station Bot.
+- Criado `CHECKPOINT_FINAL.md`.
+- Atualizados `README.md`, `PROJECT_STATUS.md`, `ROADMAP.md` e `FINAL_REVIEW.md` para o estado final.
 
 ---
 
-## Pontos que ainda precisam de teste manual
+## Ponto final da revisão
 
-Como os bots dependem do Discord, permissões e tokens reais, cada um precisa ser testado em um servidor privado.
+```txt
+Tudo pronto ✅
+Exceto: Music Station Bot ❌
+```
 
-Checklist recomendado:
-
-- [ ] `npm install` ou `pip install -r requirements.txt`
-- [ ] `.env` configurado
-- [ ] comandos registrados
-- [ ] bot online
-- [ ] comandos básicos respondendo
-- [ ] permissões revisadas
-- [ ] logs sem dados sensíveis
+O **Music Station Bot** deve ser removido do repositório ou tirado da versão principal até ser refeito do zero.
 
 ---
 
-## Bots com maior prioridade de teste
+## Bots aprovados
 
-1. `ticket-bot`
-2. `giveaway-bot`
-3. `economy-bot`
-4. `roblox-verify-bot`
-5. `minecraft-status-bot-python`
+- `rralals7-bot-suite`
+- `ticket-bot`
+- `auto-roles-bot`
+- `giveaway-bot`
+- `poll-bot`
+- `economy-bot`
+- `anti-scam-bot`
+- `roblox-public-info-bot`
+- `roblox-verify-bot`
+- `study-helper-bot`
+- `minecraft-status-bot-python`
+- `game-tournament-bot`
+
+---
+
+## Complexos aprovados/corrigidos
+
+- `community-master-bot` → aprovado
+- `roblox-rigid-verification` → aprovado
+- `ai-moderation-guard` → corrigido, exige reteste cuidadoso
+- `music-station-bot` → remover/refazer
 
 ---
 
@@ -49,24 +77,33 @@ Checklist recomendado:
 - Os bots Node.js usam `discord.js` v14.
 - Os bots simples usam JSON local para facilitar estudo.
 - Para produção real, SQLite ou PostgreSQL é melhor que JSON local.
-- O `ai-moderator-bot` é uma base segura com FAQ; integração real com IA pode ser adicionada depois.
-- O `roblox-public-info-bot` está marcado como parcial porque só possui estrutura inicial.
+- O `ai-moderator-bot` simples é apenas uma base; o sistema principal de moderação é o `ai-moderation-guard`.
+- O `roblox-public-info-bot` já foi validado com dados públicos Roblox.
+- O Music Station Bot é a exceção oficial e não deve contar como pronto.
 
 ---
 
 ## Próximas melhorias recomendadas
 
-- Criar GitHub Actions para validar sintaxe básica.
-- Criar `.env.example` padronizado em todos os bots.
-- Adicionar screenshots ou GIFs.
+- Remover o Music Station Bot da versão principal.
+- Criar releases por bot aprovado.
+- Criar changelog por versão.
 - Criar versões com SQLite.
 - Criar dashboard web para os bots principais.
-- Separar releases por versão.
+- Melhorar o site com exemplos textuais, cards e status.
+- Manter CI verde.
 
 ---
 
 ## Conclusão
 
-A base está boa para portfólio e estudo. O próximo passo profissional é testar cada bot em servidor privado e corrigir detalhes de runtime.
+A base está boa para portfólio, estudo e comunidade.
+
+Ponto atual:
+
+```txt
+RRALALS7 Dev Hub → funcional, testado, corrigido e documentado
+Music Station Bot → remover/refazer futuramente
+```
 
 > RRALALS7 sempre ajuda.

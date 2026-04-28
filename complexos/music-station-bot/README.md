@@ -1,5 +1,7 @@
 # 🎵 Advanced Music Station Bot
 
+## AVISO!!! ESTÁ BUGADO, NÃO USE ELE!!!
+
 > Bot de música complexo inspirado em bots avançados com fila, rádio, DJ mode, Lavalink opcional, providers configuráveis e arquitetura profissional.
 
 ---
@@ -124,4 +126,4 @@ LAVALINK_PASSWORD=youshallnotpass
 4. Criar configuração por guild
 5. Preparar Lavalink opcional
 
-> RRALALS7 sempre ajuda.
+> RRALALS7 sempre ajudará vocês.

@@ -8,6 +8,8 @@
 
 Os bots simples principais foram testados em ambiente real e marcados como aprovados.
 
+Este diretório é a parte mais estável do hub: aqui ficam os bots rápidos, documentados e bons para portfólio, estudo e adaptação.
+
 | Bot | Pasta | Stack | Status |
 |---|---|---|---|
 | RRALALS7 Bot Suite | [`rralals7-bot-suite`](./rralals7-bot-suite) | Node.js | ✅ Testado e aprovado |
@@ -22,17 +24,17 @@ Os bots simples principais foram testados em ambiente real e marcados como aprov
 | Study Helper Bot | [`study-helper-bot`](./study-helper-bot) | Node.js | ✅ Testado e aprovado |
 | Minecraft Status Bot | [`minecraft-status-bot-python`](./minecraft-status-bot-python) | Python | ✅ Testado e aprovado; Java Edition |
 | Game Tournament Bot | [`game-tournament-bot`](./game-tournament-bot) | Node.js | ✅ Testado e aprovado |
-| AI Moderator Bot | [`ai-moderator-bot`](./ai-moderator-bot) | Node.js | ⚠️ Funciona, mas não recomendado como principal por ser básico |
+| AI Moderator Bot | [`ai-moderator-bot`](./ai-moderator-bot) | Node.js | ⚠️ Base simples; não é o sistema principal de moderação |
 
 ---
 
 ## Stack padrão
 
-- Node.js
-- discord.js
-- dotenv
-- JSON local para dados simples
-- Python em bots gamer/consulta quando fizer sentido
+- Node.js;
+- discord.js;
+- dotenv;
+- JSON local para dados simples;
+- Python em bots gamer/consulta quando fizer sentido.
 
 ---
 
@@ -99,23 +101,24 @@ python src/main.py
 
 ## Segurança
 
-- Nunca publique `.env`
-- Nunca compartilhe token
-- Use permissões mínimas
-- Teste antes de colocar em servidor grande
-- Não use os bots para spam, abuso, roubo de conta ou coleta de dados privados
-- Revise cargos e permissões antes de usar em servidor real
+- Nunca publique `.env`;
+- nunca compartilhe token;
+- use permissões mínimas;
+- teste antes de colocar em servidor grande;
+- não use os bots para spam, abuso, roubo de conta ou coleta de dados privados;
+- revise cargos e permissões antes de usar em servidor real.
 
 ---
 
 ## Próximo nível
 
-Depois dos testes, os próximos upgrades bons são:
+Depois do checkpoint final, os próximos upgrades bons são:
 
-- prints/GIFs dos comandos funcionando
-- releases por bot
-- versões SQLite para bots com dados persistentes
-- logs administrativos onde fizer sentido
-- READMEs com exemplos visuais
+- releases por bot aprovado;
+- changelog por versão;
+- versões SQLite para bots com dados persistentes;
+- logs administrativos onde fizer sentido;
+- READMEs com exemplos de comandos e saídas esperadas;
+- vitrine textual no site para compensar a falta de prints/fotos.
 
 > RRALALS7 sempre ajuda.

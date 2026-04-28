@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Oficial — RRALALS7 Dev Hub
 
-> Ponto fixo do projeto após criação, teste, correção e documentação dos bots principais.
+> Mapa oficial depois do checkpoint final: manter o que está pronto, remover o que atrapalha e evoluir com releases.
 
 ---
 
@@ -13,12 +13,31 @@ Ponto atual:
 ```txt
 base do hub → feita
 bots simples → feitos, testados e aprovados
-complexos principais → criados, parte validada
+complexos principais → criados e documentados
 bugs reais → corrigidos ou isolados
 CI → ajustado
-site/vitrine → criado
-MDs principais → atualizados
+site/vitrine → criado e funcional
+MDs principais → atualizados para o checkpoint final
+checkpoint final → registrado
 ```
+
+---
+
+## ⚠️ Decisão final sobre Music Station Bot
+
+O **Music Station Bot** não deve continuar como projeto pronto do hub.
+
+```txt
+Status → bugado/experimental
+Ação recomendada → deletar/remover do repo
+Futuro → refazer do zero em outro arco
+```
+
+Motivo:
+
+- dependências de áudio/voz podem quebrar instalação e CI;
+- o sistema ainda precisa de refatoração completa;
+- manter ele como projeto principal pode passar impressão errada sobre o estado final do hub.
 
 ---
 
@@ -32,7 +51,9 @@ MDs principais → atualizados
 | Templates de ideia/roadmap | ✅ Feito |
 | Template de feedback por issue | ✅ Feito |
 | Site/vitrine do hub | ✅ Feito |
-| PROJECT_STATUS.md | ✅ Feito |
+| PROJECT_STATUS.md | ✅ Atualizado |
+| CHECKPOINT_FINAL.md | ✅ Criado |
+| FINAL_REVIEW.md | ✅ Atualizado |
 | Docs gerais | ✅ Feito |
 | Architecture docs | ✅ Feito |
 | Test cases | ✅ Feito |
@@ -65,7 +86,7 @@ MDs principais → atualizados
 | Community Master Bot | ✅ Testado e aprovado |
 | Roblox Rigid Verification | ✅ Testado e aprovado; registro corrigido |
 | AI Moderation Guard / Moderation OS | 🛠️ Corrigido; precisa reteste final cuidadoso |
-| Music Station Bot | 🧪 Experimental; código preservado, package.json removido para não quebrar CI |
+| Music Station Bot | ❌ Remover; refazer do zero futuramente |
 
 ---
 
@@ -88,7 +109,7 @@ MDs principais → atualizados
 | Economy Bot | loja separada, `/buy` com choices, `/use`, itens consumíveis e permanentes |
 | AI Moderation Guard | permissões movidas para runtime, evitando erro em subcomandos |
 | Roblox Rigid Verification | permissões movidas para runtime e handlers globais adicionados |
-| Music Station Bot | problema de instalação isolado removendo package.json do CI |
+| Music Station Bot | identificado como projeto instável; recomendação final é remover/refazer |
 | CI Node | script ajustado para instalar projetos sem rodar scripts nativos |
 
 ---
@@ -114,18 +135,20 @@ python src/main.py
 
 ---
 
-## Próximo arco
+## 🚀 Próximo arco
 
 Agora o projeto deve focar em:
 
-1. prints/GIFs de cada bot funcionando
-2. releases por bot
-3. changelog por versão
-4. SQLite nos bots com dados persistentes
-5. site mais bonito e completo
-6. reteste final do Moderation OS
-7. refazer Music Station Bot do zero quando for voltar nele
-8. manter CI verde
+1. remover o Music Station Bot da versão principal;
+2. criar releases por bot aprovado;
+3. criar changelog por versão;
+4. migrar bots com dados persistentes para SQLite;
+5. evoluir o site com textos, cards e exemplos de uso;
+6. retestar o Moderation OS com cuidado;
+7. manter CI verde;
+8. refazer Music Station Bot do zero apenas quando for prioridade real.
+
+> Como não há prints/fotos, a vitrine deve priorizar exemplos textuais, comandos, tabelas, status, releases e documentação clara.
 
 ---
 
@@ -143,6 +166,7 @@ Agora o projeto deve focar em:
 - Code Helper Bot
 - AI Ticket Helper
 - Bot Status Monitor real
+- Music Station Bot refeito do zero
 
 ### Apps web
 
@@ -174,7 +198,13 @@ Agora o projeto deve focar em:
 O projeto chegou no ponto fixo:
 
 ```txt
-feito → testado → corrigido → documentado
+feito → testado → corrigido → documentado → checkpoint registrado
+```
+
+Próxima mentalidade:
+
+```txt
+manter estável → remover instável → lançar releases → evoluir com calma
 ```
 
 > RRALALS7 sempre ajuda.

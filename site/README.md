@@ -9,13 +9,13 @@
 ```txt
 ✅ Funcional
 ✅ Explicado
-✅ Atualizado para o ponto fixo atual
+✅ Atualizado para o checkpoint final
 ```
 
 O site representa o estado atual do hub:
 
 ```txt
-feito → testado → corrigido → documentado
+feito → testado → corrigido → documentado → checkpoint registrado
 ```
 
 ---
@@ -26,22 +26,32 @@ A pasta `site/` apresenta o projeto de forma visual e direta, mostrando bots, si
 
 Ela funciona como cartão de visita do repositório.
 
+Como o projeto não depende de fotos/prints no momento, a vitrine deve valorizar:
+
+- textos claros;
+- status por projeto;
+- exemplos de comandos;
+- links para documentação;
+- cards organizados;
+- releases e changelogs futuros.
+
 ---
 
 ## O que o site mostra
 
-- resumo do hub
-- bots simples testados e aprovados
-- sistemas complexos aprovados/corrigidos/experimentais
-- contador de bots, sistemas complexos e apps
-- ponto fixo atual do projeto
-- catálogo pesquisável
-- filtro por categoria
-- cards com links para READMEs
-- seção de sistemas complexos
-- seção de apps web
-- seção de documentação
-- próximo arco do projeto
+- resumo do hub;
+- bots simples testados e aprovados;
+- sistemas complexos aprovados/corrigidos;
+- alerta de que o Music Station Bot deve ser removido/refeito;
+- contador de bots, sistemas complexos e apps;
+- ponto fixo atual do projeto;
+- catálogo pesquisável;
+- filtro por categoria;
+- cards com links para READMEs;
+- seção de sistemas complexos;
+- seção de apps web;
+- seção de documentação;
+- próximo arco do projeto.
 
 ---
 
@@ -95,12 +105,12 @@ site/index.html
 
 Use esse arquivo para alterar:
 
-- hero
-- estatísticas
-- seção de complexos
-- seção de apps
-- seção de docs
-- seção de futuro
+- hero;
+- estatísticas;
+- seção de complexos;
+- seção de apps;
+- seção de docs;
+- seção de futuro.
 
 ### Alterar projetos/cards
 
@@ -141,13 +151,13 @@ site/style.css
 
 Use esse arquivo para alterar:
 
-- cores
-- cards
-- responsividade
-- botões
-- grid
-- espaçamento
-- fundo
+- cores;
+- cards;
+- responsividade;
+- botões;
+- grid;
+- espaçamento;
+- fundo.
 
 ---
 
@@ -173,7 +183,7 @@ Use esse arquivo para alterar:
 - Community Master Bot — aprovado
 - Roblox Rigid Verification — aprovado
 - Moderation OS — corrigido, aguardando reteste cuidadoso
-- Music Station Bot — experimental, código preservado
+- Music Station Bot — remover/refazer do zero
 
 ### Apps
 
@@ -186,6 +196,7 @@ Use esse arquivo para alterar:
 
 - Project Status
 - Roadmap Oficial
+- Checkpoint Final
 - Final Review
 - Architecture
 
@@ -213,12 +224,13 @@ ou mover/publicar o conteúdo dela conforme o método escolhido.
 
 ## Próximos upgrades possíveis
 
-- transformar em React/Vite
-- gerar catálogo por JSON
-- criar página individual para cada bot
-- adicionar screenshots/GIFs
-- criar deploy fixo em GitHub Pages, Replit ou outro host
-- adicionar badges de status por projeto
-- criar busca por stack/status
+- transformar em React/Vite;
+- gerar catálogo por JSON;
+- criar página individual para cada bot;
+- adicionar exemplos textuais de comandos;
+- criar deploy fixo em GitHub Pages, Replit ou outro host;
+- adicionar badges de status por projeto;
+- criar busca por stack/status;
+- esconder/remover Music Station Bot da vitrine principal até ser refeito.
 
 > RRALALS7 sempre ajuda.
